@@ -5,15 +5,17 @@
     font-family: Arial, sans-serif;
 }
 
-body {
+/*body{
     display: flex;
     justify-content: center;
     background-color: #f5f5f5;
     padding: 20px;
-}
+}*/
+
 
 .product-page {
     display: flex;
+    
     gap: 20px;
     max-width: 1200px;
     background-color: #fff;
@@ -22,15 +24,15 @@ body {
 }
 
 .product-gallery {
-    display: flex;
-    flex-direction: column;
+    display: fleX;
+    gap: 1rem;
     width: 50%;
 }
 
 .thumbnails {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     max-width: 80px;
 }
 

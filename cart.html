@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Shopping Cart with Images</title>
+    
     <link rel="icon" href="images/Adidas-Logo.png"
     type="text/x-icon">
-    <link rel="stylesheet" href="cart.css">
+    
+    <link rel ="stylesheet" href="cart.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -16,10 +19,10 @@
 </head>
 <body>
     <header>
-        <a href="#" class ="logo"> <img src="images/Adidas-Logo.png" alt=""></a>
+        <a href="index.html" class ="logo"> <img src="images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li> <a href="# "> home</a></li>
+            <li> <a href="index.html"> home</a></li>
             <li> <a href="# "> shop</a></li>
             <li> <a href="# ">product </a></li>
             <li> <a href="# "> page </a></li>
@@ -29,58 +32,67 @@
         <!--thẻ <i> là thẻ chứ biểu tượng -->
         <div class="nav-icon">
             <a href = "#" ><i class='bx bx-search' ></i></a>
-            <a href = "#" ><i class='bx bx-user'></i></a>
+            
             <a href = "#" ><i class='bx bx-cart' ></i></a>
             
             <div class= "bx bx-menu" id ="menu-icon"></div>
         </div>
 
     </header>
-    <div class="cart-container">
-        <!-- Product Table -->
-        <table class="cart-table">
+
+    <div class="container">
+        <h1>Shopping Cart </h1>
+
+        <!-- Product List (for demonstration) -->
+        <div class="text">
+            <h3>Products</h3>
+        </div>
+        <div class="product">
+            
+            <div class="product-cart">
+                <img src="images/11.png" alt="">   
+                <button class="btn" onclick="addToCart('Product 1', 100, 'images/11.png')">Add  ($100)</button>
+            </div>
+
+            <div class="product-cart">
+                <img src="images/11.png" alt="">   
+                <button class="btn" onclick="addToCart('Product 2', 150, 'images/11.png')">Add  ($150)</button>
+            </div>
+            
+            <div class="product-cart">
+            <img src="images/11.png" alt="">   
+            <button class="btn" onclick="addToCart('Product 3', 200, 'images/11.png')">Add  ($200)</button>
+            </div>
+            
+        </div>
+
+        <!-- Cart Table -->
+        <table id="cartTable">
             <thead>
                 <tr>
-                    <th>Tên</th>
-                    <th>Giá</th>
-                    <th>Số Lượng</th>
-                    <th>Tổng Cộng</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                
+            <tbody id="cartBody">
+                <!-- Cart items will be added here -->
             </tbody>
         </table>
 
-        <!-- Summary and Discount Section -->
-        <div class="summary">
-            <table class="summary-table">
-                <tr>
-                    <td>Tạm Tính:</td>
-                
-                </tr>
-                <tr>
-                    <td>Vận Chuyển:</td>
-                
-                </tr>
-                <tr>
-                    <td><strong>Tổng Cộng:</strong></td>
-                    
-                </tr>
-            </table>
-            <div class="summary-buttons">
-                <button class="btn">Cập Nhật Giỏ Hàng</button>
-                <button class="btn checkout">Thanh Toán</button>
-            </div>
-        </div>
-        
-
-        <!-- Discount Code Section -->
-        <div class="discount-code">
-            <h3>Áp Dụng Mã Giảm Giá</h3>
-            <input type="text" placeholder="Mã Giảm Giá">
-            <button class="btn apply">ÁP DỤNG</button>
-        </div>
+        <!-- Total Price -->
+        <div id="totalPrice" class="total">Total: $0</div>
     </div>
+
+
+
+
+<script src="java.js">
+    
+</script>
+
 </body>
 </html>

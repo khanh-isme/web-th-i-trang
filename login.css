@@ -1,21 +1,100 @@
-* {
-    box-sizing: border-box;
+*{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
-body {
+header{
+    position: fixed; /*giúp cố định vị trí của phần tử trên trang, sao cho nó luôn hiển thị ở một vị trí cố định*/
+    width: 100%;
+    top:0;
+    
+    right: 0;
+    z-index: 1000;/* Ưu tiên cao để đảm bảo luôn hiển thị phía trên các phần tử khác */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    
+}
+.logo img {
+    max-width: 50px; /* Chiều rộng của logo */
+    height: auto; /* Giữ tỷ lệ ban đầu của hình ảnh */
+}
+.nav-menu{
+    display: flex;
+}
+.nav-menu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;/*dùng để chuyển đổi chữ cái đầu của mỗi từ trong văn bản thành chữ in hoa*/
+    padding: 10px 20px;
+    font-weight: 400; /* độ dày chữ */
+
+    transition: all .42s ease;/*thuộc tính CSS dùng để tạo hiệu ứng chuyển tiếp mượt mà cho các thay đổi của một phần tử trên trang*/
+}
+
+/* đổi hiệu ứng khi di chuột qua*/
+.nav-menu a:hover{
+    color:#EE1c47;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight:400;
+    transition: all .42s ease;
+}
+.nav-icon  i:hover{
+    transition: scale(1.1); 
+    color:#EE1c47;
+}
+#menu-icon{
+    font-size: 30px;
+    color:#2c2c2c;
+    z-index: 10001;
+    cursor: pointer;/*đổi con trỏ chuột*/
+}
+
+header.sticky{
+    background: #fff;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+
+
+
+
+.login-section {
     display: flex;
     justify-content: center;
     
+    width: 100%;
+    height: auto;
+    background-image: url(images/32.webp);
+    background-position: center;
+    background-size: cover;
+
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #f7fcff, #d4f3ff);
+    
+    color:#4e4e4e;
 }
 
 .login-container {
-    width: 300px;
+    width: 400px;
+    height: 450px;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -62,7 +141,7 @@ input[type="password"] {
     background-color: rgba(112, 112, 112, 0.2);
     border: none;
     border-radius: 5px;
-    color: #3a3a3a;
+    color: #796d6d;
     font-size: 16px;
 }
 
@@ -92,8 +171,17 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 10px;
 }
 
 button:hover {
     background-color: #004080;
+}
+
+.regester button{
+    width: 100%;
+    background-color: #249b0a;
+}
+.sign button{
+    width: 100% ;
 }
