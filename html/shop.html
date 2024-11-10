@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adidas Clone</title>
+    <link rel="icon" href="images/Adidas-Logo.png"
+    type="text/x-icon">
+    
+    <link rel ="stylesheet" href="/css/shop.css">
+    <link rel ="stylesheet" href="/css/base.css">
+    <link rel ="stylesheet" href="/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>    
+    <header>
+        <a href="index.html" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li> <a href="# "> home</a></li>
+            <li> <a href="/html/shop.html"> shop</a></li>
+                    
+            <li> <a href="# "> page </a></li>
+            <li> <a href="/html/cart.html"> cart</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+
+            <a href = "/html/login.html" ><i class='bx bx-user'></i></a>
+
+
+            <div class="cart-icon" onclick="toggleCartPopup()">
+
+                <i class='bx bx-cart' id="cart-icon"></i>
+            </div>
+            
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+
+    </header>
+
+
+    <!-- Cart Popup -->
+    <div class="cart-popup" id="cartPopup">
+        <div class="cart-item">
+            <img src="../images/13.png" alt="Product Image">
+            <div class="cart-item-details">
+                <div class="cart-item-name">T-Shirt 14A</div>
+                <div class="cart-item-price">$50.05 x1</div>
+            </div>
+            <div class="cart-item-delete" onclick="removeItem()">
+                <i class='bx bxs-trash-alt' ></i>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="../images/14.png" alt="Product Image">
+            <div class="cart-item-details">
+                <div class="cart-item-name">T-Shirt 14A</div>
+                <div class="cart-item-price">$50.05 x1</div>
+            </div>
+            <div class="cart-item-delete" onclick="removeItem()">
+                <i class='bx bxs-trash-alt' ></i>
+            </div>
+        </div>
+
+        <div class="cart-total">Total: $100.10</div>
+        <a href="/html/ship.html">
+
+            <button class="checkout-btn">CHECKOUT</button>
+        </a>
+    </div>
+
+
+
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+          <!-- Category Selection -->
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="">Select category</option>
+              <option value="shoes">Shoes</option>
+              <option value="clothing">Clothing</option>
+              <option value="accessories">Accessories</option>
+              <!-- Add more categories as needed -->
+            </select>
+          </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <button type="button" class="search-button" onclick="performSearch()">Search</button>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <div class="container">
+            <aside class="sidebar">
+                <h2>Filters</h2>
+                <div class="filter-group">
+                </div>
+                <div class="filter-group">
+                    <label><input type="checkbox"> Boys</label><br>
+                    <label><input type="checkbox"> Girls</label>
+                </div>
+                <div class="filter-group">
+                    <a href="">Size</a>
+                </div>
+                <div class="filter-group">
+                    <a href="">Color</a>
+                </div>
+                <div class="filter-group">
+                    <a href="">Collection</a>
+                </div>
+                <div class="filter-group">
+                    <a href="">Width</a>
+                </div>
+            </aside>
+    
+            <main class="product-list">
+                <div class="header">
+                    <h1>Giày siêu chất</h1>
+                </div>
+    
+                <div class="products">
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 1">
+                        <p class="tag">Hàng mới</p>
+                        <h3>Nike Pegasus Trail 5</h3>
+                        <p>Giày cho mấy nhóc già đầu đi</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">3,059,000đ</p>
+                    </div>
+                    <!-- Repeat product divs for other products -->
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 2">
+                        <p class="tag">Bán chạy</p>
+                        <h3>For My Pride 41</h3>
+                        <p>Giày giành cho MCK</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">2,679,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 3">
+                        <p class="tag">Bán chạy</p>
+                        <h3>Nike GGa</h3>
+                        <p>Mang vào auto đẹp trai</p>
+                        <p>2 Mẫu màu</p>
+                        <p class="price">4,679,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 4">
+                        <p class="tag">Bán chạy</p>
+                        <h3>Nike air mag hàng faki</h3>
+                        <p>Mang vào auto đẹp gái</p>
+                        <p>2 Mẫu màu</p>
+                        <p class="price">4,000,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 5">
+                        <p class="tag">Cháy hàng</p>
+                        <h3>Giày 30/4/1975</h3>
+                        <p>Mang vào dinh độc lập sẽ được tặng huy chương</p>
+                        <p>0 Mẫu màu</p>
+                        <p class="price">7,000,000,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 6">
+                        <p class="tag">Bán chạy</p>
+                        <h3>Nigeria</h3>
+                        <p>Mang hiệu ứng quyền công dân</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">2,449,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 7">
+                        <p class="tag">Ế hàng</p>
+                        <h3>Giày Gengu</h3>
+                        <p>Mang vào thì thua T1</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">1,099,000đ</p>
+                    </div>
+                    <div class="product">
+                        <img src="../images/11.png" alt="Shoe 8">
+                        <p class="tag">Bán đắt</p>
+                        <h3>Giày SGP oai phong</h3>
+                        <p>Mang vào sẽ có 9 lần vô địch quốc nội</p>
+                        <p>2 Mẫu màu</p>
+                        <p class="price">999,000đ</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ul class="pagination shop-product-pagination">
+            <li class="pagination-item">
+                <a href="">
+                    <i class='bx bx-chevron-left'></i>
+                </a>
+            </li>
+            <li class="pagination-item shop-product-pagination-item">
+                <a href="">
+                    1
+                </a>
+            </li>
+            <li class="pagination-item">
+                <a href="">
+                    2
+                </a>
+            </li>
+            <li class="pagination-item">
+                <a href="">
+                    ...
+                </a>
+            </li> <li class="pagination-item">
+                <a href="">
+                    4
+                </a>
+            </li>
+
+            <li class="pagination-item">
+                <a href="">
+                    
+                    <i class='bx bx-chevron-right'></i>
+                </a>
+            </li>
+        </ul>
+
+
+
+
+
+
+
+         <!--footer-->
+         <section class="footer">
+            <div class="footer-box">
+                <h2><a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, voluptate laboriosam a explicabo quis qui voluptatum blanditiis labore non? A, consequatur atque ea vero molestias eum corporis minima sunt tempore.</p>
+           
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
+           
+            </div>
+            <div class="footer-box">
+                <h3>Support</h3>
+                <li> <a href="#">Product</a></li>
+                <li> <a href="#">Help & Product</a></li>
+                <li> <a href="#">Return of Policy</a></li>
+                <li> <a href="#">Terms of Use</a></li>
+                <li> <a href="#">FAQ</a></li>
+                
+        
+            </div> 
+            <div class="footer-box">
+                <h3>Our Branches</h3>
+                <li> <a href="#">India</a></li>
+                <li> <a href="#">Japan</a></li>
+                <li> <a href="#">United States</a></li>
+                <li> <a href="#">Canada</a></li>
+                <li> <a href="#">Nepal</a></li>
+                
+        
+            </div> 
+        
+            <div class="footer-box">
+                <h3>Payment Method</h3>
+                <div class="payment">
+                    <img src="../images/visa.png">
+                    <img src="../images/Mastercard_2019_logo.svg.png">
+                    <img src="../images/paypal.png">
+                    <img src="../images/American-Express-Color.png">
+                </div>
+                
+        
+            </div> 
+        </section>
+
+        <script src="/java script/java.js "></script>
+</body>
+</html>
