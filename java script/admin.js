@@ -83,3 +83,70 @@ let products = [];
     }
 
     renderTable();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    
+        // Giả lập kiểm tra thông tin đăng nhập (thực tế nên kiểm tra qua API)
+        if (username === "admin" && password === "1") {
+            document.getElementById("login-section").style.display = "none";
+            document.getElementById("admin-section").style.display = "block";
+            document.getElementById("admin-name").textContent = username;
+        } else {
+            alert("Sai tên đăng nhập hoặc mật khẩu!");
+        }
+    }
+    
+    function logout() {
+        document.getElementById("admin-section").style.display = "none";
+        document.getElementById("login-section").style.display = "block";
+    }
+    
+    function addUser() {
+        const userList = document.getElementById("user-list");
+        const newUser = document.createElement("div");
+        newUser.textContent = "Người dùng mới";
+        userList.appendChild(newUser);
+    }
+    
+    function addProduct() {
+        const productList = document.getElementById("product-list");
+        const newProduct = document.createElement("div");
+        newProduct.textContent = "Sản phẩm mới";
+        productList.appendChild(newProduct);
+    }
+    
+    function filterOrders() {
+        const orderList = document.getElementById("order-list");
+        orderList.innerHTML = "<div>Đơn hàng đã được lọc</div>";
+    }
+    
+    function showAnalytics() {
+        const analyticsData = document.getElementById("analytics-data");
+        analyticsData.innerHTML = "<div>Hiển thị thống kê kinh doanh</div>";
+    }
+    

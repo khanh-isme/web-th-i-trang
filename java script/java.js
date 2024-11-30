@@ -113,4 +113,20 @@ let cart = [];
       }
     
 
-    
+      
+// viết cái nút tăng giảm số lượng    
+// Hàm tăng số lượng
+function increaseQuantity() {
+    const quantityInput = document.getElementById("quantity-input");
+    let currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
+  }
+
+  // Hàm giảm số lượng
+  function decreaseQuantity() {
+    const quantityInput = document.getElementById("quantity-input");
+    let currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+      quantityInput.value = currentQuantity - 1;
+    }
+  }

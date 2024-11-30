@@ -1,0 +1,563 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color : #fda702;
+    --second-color : #ebeff2;
+    --text-color : #02171d;
+    --bg-color:#fff;
+    --navbar-height:34px;
+    /* box shadow */
+    --box-shadow :2px 2px 10px 4px rgb(14 55 54 / 15%);
+}
+
+header{
+  position: fixed; /*giúp cố định vị trí của phần tử trên trang, sao cho nó luôn hiển thị ở một vị trí cố định*/
+  width: 100%;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: #fff;
+}
+.logo img {
+  max-width: 50px;
+  height: auto; 
+}
+.nav-menu{
+  display: flex;
+}
+.nav-menu a{
+  color: #2c2c2c;
+  font-size: 16px;
+  text-transform: capitalize;/*dùng để chuyển đổi chữ cái đầu của mỗi từ trong văn bản thành chữ in hoa*/
+  padding: 10px 20px;
+  font-weight: 400; 
+
+  transition: all .42s ease;/*thuộc tính CSS dùng để tạo hiệu ứng chuyển tiếp mượt mà cho các thay đổi của một phần tử trên trang*/
+}
+
+
+.nav-menu a:hover{
+  color:#EE1c47;
+}
+
+.nav-icon{
+  display: flex;
+  align-items: center;
+
+}
+.nav-icon i{
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight:400;
+  transition: all .42s ease;
+}
+.nav-icon  i:hover{
+  transition: scale(1.1); 
+  color:#EE1c47;
+}
+#menu-icon{
+  font-size: 30px;
+  color:#2c2c2c;
+  z-index: 10001;
+  cursor: pointer;/*đổi con trỏ chuột*/
+}
+
+header.sticky{
+  background: #fff;
+  padding: 10px 10%;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0; /* Màu nền */
+  border-radius: 20px;
+  padding: 5px 5px;
+  width: 200px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  flex-grow: 1;
+  margin-left: 5px;
+  max-width: 65%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.search-bar .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar .icon::before {
+  font-size: 16px;
+}
+
+/*xong phan header*/
+
+
+/* Style for the cart popup */
+.cart-popup {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
+.cart-popup a{
+  text-align: center;
+}
+/* Style for cart items */
+.cart-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-name {
+  font-weight: bold;
+}
+
+.cart-item-price {
+  color: #555;
+}
+
+.cart-item-size {
+  font-size: 12px;
+  color: #777;
+}
+
+.cart-item-delete {
+  cursor: pointer;
+  color: #dc3545;
+}
+
+
+/* Style for total and checkout button */
+.cart-total {
+  font-weight: bold;  
+  font-size: 16px;
+  text-align: right;
+}
+
+.checkout-btn {
+  background-color: #111010;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.checkout-btn:hover {
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Search container styles */
+.search-container {
+  position: fixed;
+  top: 80px;
+  right: 160px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
+
+.search-container h2 {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.price-range {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-range input[type="number"] {
+  width: 48%;
+}
+
+.search-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0e0f0f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #b8b024;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bag {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 100px auto ;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    margin: 5px 0;
+  }
+  
+  .sale-banner {
+    background-color: #f6f6f6;
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid #000;
+  }
+  
+
+
+ 
+  
+  .product {
+    display: flex;
+
+    gap: 15px;
+    flex: 2;
+    border: 1px solid #111;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    width: 200px;
+    height: auto;
+  }
+  
+  .product-info {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  .quantity {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #ddd;
+  }
+  
+  #quantity-input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  
+  .product-info .price {
+    margin-top: 10px;
+  }
+  
+  .product-info .original-price {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .product-info .sale-price {
+    color: #e60000;
+    font-weight: bold;
+  }
+  
+  .bag-icon{
+    margin-top:0px;    
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .bag-icon :hover{
+    background-color: #932d2d;
+    color: #111;
+  }
+  
+
+  .order-summary {
+    background: #fffefe;
+    padding: 15px;
+    
+    flex: 1;
+    max-width: 400px;
+    
+  }
+  
+  .order-summary h3 {
+    margin-bottom: 10px;
+  }
+  
+  .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .order-summary ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .order-summary h4 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .checkout-btn,
+  .gpay-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .checkout-btn {
+    background-color: black;
+    color: white;
+  }
+  
+  .gpay-btn {
+    background-color: #f5f5f5;
+    color: black;
+    border: 1px solid #ddd;
+  }
+
+.pay p{
+    margin-top: 10px;
+    color: #000;
+    
+}
+.pay-img{
+    display: flex;
+    margin-top: 20px;
+}
+.pay-img img{
+    width: 50px;
+    margin-right: 20px;
+}
+ 
+
+
+
+
+
+/*phần New Arrivals Just Landed*/
+
+
+/* Phần bao bọc sản phẩm */
+.product-section-a{
+  position: relative;
+  
+  text-align: center;
+}
+
+.product-section-a h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Container của sản phẩm */
+.product-container-a {
+  margin:  auto;
+  display: flex;
+  max-width: 1200px;
+
+  overflow-x: auto;
+  gap: 5px;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+
+
+/* Thiết kế từng sản phẩm */
+.product-a {
+  flex-shrink: 0;
+  
+  background-color: #fff;
+  text-align: left;
+  padding: 10px;
+
+  
+}
+
+.product-a img {
+  width: 300px;
+  height: auto;
+  
+}
+
+.product-a h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.product-a p {
+  color: #777;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hiệu ứng hover */
+.product-a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+/* Nút điều khiển cuộn */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0px;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.scroll-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
