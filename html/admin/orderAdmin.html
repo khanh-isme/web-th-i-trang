@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style_OrderAdmin.css">
+    <link rel="stylesheet" href="../../css/avt.css">
+
+    
+    <title>Đơn hàng</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+</head>
+<body>
+    
+
+    <header>
+        <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li><a href="productAdmin.html">Sản phẩm</a></li>
+            <li><a href="orderAdmin.html">Đơn hàng</a></li>
+            <li><a href="userAdmin.html">Người dùng</a></li>
+            <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
+            <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+  
+  
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+                  
+            
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+  
+    </header>
+  
+  
+    
+  
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+  
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+          <a href="shop.html">
+            <button type="button" class="search-button">Search</button>
+          </a>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+  
+
+
+
+
+
+
+    <main>
+        
+            <section id="main">
+                
+                <h1>Đơn Hàng</h1>
+                <!--product list-->
+                <div class="filter" style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                    <!-- Thành phố -->
+                    <div style="display: flex; flex-direction: column; flex: 1 1 150px;">
+                        <label for="city" style="font-size: 1rem; margin-bottom: 0.25rem;">Thành phố</label>
+                        <select id="city" name="city" style="
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                            appearance: none;
+                            cursor: pointer;
+                        ">
+                            <option value="" disabled selected>Chọn</option>
+                            <option value="hanoi">Hà Nội</option>
+                            <option value="hochiminh">TP. Hồ Chí Minh</option>
+                            <option value="danang">Đà Nẵng</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                
+                    <!-- Quận/huyện -->
+                    <div style="display: flex; flex-direction: column; flex: 1 1 150px;">
+                        <label for="district" style="font-size: 1rem; margin-bottom: 0.25rem;">Quận/Huyện</label>
+                        <select id="district" name="district" style="
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                            appearance: none;
+                            cursor: pointer;
+                        ">
+                            <option value="" disabled selected>Chọn</option>
+                            <option value="ba-dinh">Ba Đình</option>
+                            <option value="dong-da">Đống Đa</option>
+                            <option value="hai-ba-trung">Hai Bà Trưng</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                
+                    <!-- Địa chỉ cụ thể -->
+                    <div style="display: flex; flex-direction: column; flex: 2 1 250px;">
+                        <label for="specific-address" style="font-size: 1rem; margin-bottom: 0.25rem;">Địa chỉ cụ thể</label>
+                        <input type="text" id="specific-address" name="specific-address" placeholder="Nhập địa chỉ" style="
+                            width: 100%;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                        ">
+                    </div>
+                
+                    <!-- Thời gian -->
+                    <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem; flex: 2 1 250px;">
+                        <label for="start" style="font-size: 1rem;">Từ:</label>
+                        <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31" style="
+                            flex: 1;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                        ">
+                        <label for="end" style="font-size: 1rem;">đến</label>
+                        <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31" style="
+                            flex: 1;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                        ">
+                    </div>
+                
+                    <!-- Trạng thái -->
+                    <div style="display: flex; flex-direction: column; flex: 1 1 150px;">
+                        <!-- <label for="status" style="font-size: 1rem; margin-bottom: 0.25rem;">Trạng thái</label> -->
+                        <select id="status" name="status" style="
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                            appearance: none;
+                            cursor: pointer;
+                        ">
+                            <option value="" disabled selected>Trạng thái <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="pending">Đang xử lý <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="shipped">Đã giao <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="completed">Hoàn tất <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="cancelled">Đã hủy <i class="fa-solid fa-caret-down"></i></option>
+                        </select>
+                    </div>
+                
+                    <!-- Nút Lọc -->
+                    <div style="display: flex; flex-direction: column; flex: 1 1 150px; align-items: center;">
+                        <a href="orderAdmin.html" class="show" style="
+                            display: inline-block;
+                            padding: 0.5rem 1rem;
+                            background-color: #007bff;
+                            color: #fff;
+                            text-decoration: none;
+                            font-size: 1rem;
+                            font-weight: bold;
+                            border-radius: 4px;
+                            text-align: center;
+                            cursor: pointer;
+                        ">Lọc</a>
+                    </div>
+                </div>            
+                
+            <table>
+                <!--noi dung tieu de-->
+                <tr class="title">
+                    <th>Mã đơn hàng</th>
+                    <th>Khách hàng</th>
+                    <th>Địa chỉ</th>
+                    <th>Ngày mua</th>
+                    <th>Thành tiền</th>
+                    <th>Trạng thái</th>
+                </tr>
+                <!--noi dung cac san pham-->
+                <tr class="product">
+                    <td><a href="orderDetail.html">#1</a></td>
+                    <td>Trọng Hiếu</td>
+                    <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
+                    <td>Ngày mua: 23/11/2024</td>
+                    <td>16.490.000đ</td>
+                    <td class="state">Đã Hủy</td>
+                </tr>
+                <tr class="product">
+                    <td><a href="orderDetail.html">#2</a></td>
+                    <td>Nguyễn Ân</td>
+                    <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
+                    <td>Ngày mua: 23/11/2024</td>
+                    <td>16.490.000đ</td>
+                    <td class="state">Đã xác nhận</td>
+                </tr>
+                <tr class="product">
+                    <td><a href="orderDetail.html">#3</a></td>
+                    <td>Mr.Thanh</td>
+                    <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
+                    <td>Ngày mua: 23/11/2024</td>
+                    <td>16.490.000đ</td>
+                    <td class="state">Đã giao thành công</td>
+                </tr>
+            </table>
+            <div class="pagination">
+                <a href="orderAdmin.html">&lt;</a>
+                <a href="orderAdmin.html" class="active">1</a>
+                <a href="orderAdmin2.html">2</a>
+                <a href="orderAdmin2.html">&gt;</a>
+            </div>
+        </section>
+    </main>
+<script>
+    // js cua phan aside menu
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "15%";
+            document.getElementById("mySidebar").style.width = "15%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+            }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+</script>
+
+<script src="/java script/java.js"></script>  
+</body>
+</html>

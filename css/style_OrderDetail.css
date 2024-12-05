@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body{
+	height: 100%;
+	background-color: #fff;
+}
+
+
+
+/*nav-bar*/
+header{
+    position: fixed; /*giúp cố định vị trí của phần tử trên trang, sao cho nó luôn hiển thị ở một vị trí cố định*/
+    width: 100%;
+    height: 100px;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    background-color: #fff;
+}
+.logo img {
+    max-width: 50px;
+    height: auto; 
+}
+.nav-menu{
+    display: flex;
+}
+.nav-menu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;/*dùng để chuyển đổi chữ cái đầu của mỗi từ trong văn bản thành chữ in hoa*/
+    padding: 10px 20px;
+    font-weight: 400; 
+
+    transition: all .42s ease;/*thuộc tính CSS dùng để tạo hiệu ứng chuyển tiếp mượt mà cho các thay đổi của một phần tử trên trang*/
+}
+
+
+.nav-menu a:hover{
+    color:#EE1c47;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+
+}
+.nav-icon i{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight:400;
+    transition: all .42s ease;
+}
+.nav-icon  i:hover{
+    transition: scale(1.1); 
+    color:#EE1c47;
+}
+#menu-icon{
+    font-size: 30px;
+    color:#2c2c2c;
+    z-index: 10001;
+    cursor: pointer;/*đổi con trỏ chuột*/
+}
+
+header.sticky{
+    background: #fff;
+    padding: 10px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0; /* Màu nền */
+    border-radius: 20px;
+    padding: 5px 5px;
+    width: 200px;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    flex-grow: 1;
+    margin-left: 5px;
+    max-width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.search-bar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar .icon::before {
+    font-size: 16px;
+}
+
+/*xong phan header*/
+
+
+/* Style for the cart icon */
+
+
+/* Style for the cart popup */
+
+
+
+  /* Search container styles */
+  .search-container {
+    position: fixed;
+    top: 100px;
+    right: 160px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+  }
+
+  .search-container h2 {
+    margin: 0 0 15px;
+    font-size: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input[type="text"],
+  .form-group select,
+  .form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .price-range {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price-range input[type="number"] {
+    width: 48%;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0e0f0f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #b8b024;
+    color: #000;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main*/
+main{
+	margin-top: 100px;
+	position: relative;
+}
+/* menu */
+
+/*section*/
+.menu-button {
+	background-color: #fff;
+	text-align: left;
+	border: none;
+	font-size: 24px;
+	padding: 8px 0;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+section {
+	min-height: 100vh; 
+    margin-bottom: 20px;
+    margin-left: auto;
+    height: 100%;
+    padding: 20px 0 20px 40px;
+}
+
+h1{
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	
+}
+
+h2 {
+	margin: 10px 100px 0;
+}
+
+hr {
+	margin: 16px 0;
+}
+
+table{
+	margin: 10px auto;
+	width: 90%;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 20px;
+}
+
+th{
+	font-size: 20px;
+}
+
+.product img{
+	width: 100px;
+	
+}
+
+.product{
+	font-size: 18px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.product td{
+	padding: 10px 0 10px 20px;
+	border-radius: 4px;
+}
+
+/*form*/
+.form-main  {
+	width: 80%;
+	margin: 10px auto;
+	padding: 10px 0;
+}
+
+.info label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+	font-size: 18px;
+    margin:10px 0;
+    font-weight: bold;
+}
+
+.form-main  input[type="text"], .form-main input[type="number"],.form-main select{
+	font-size: 16px;
+    width: 70%;
+	height: 40px;
+    padding: 10px;
+    margin-top: 5px;
+	margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.option label:nth-child(1){
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+	font-size: 18px;
+    margin:10px 0;
+    font-weight: bold;
+}
+
+.option label:nth-child(2), label:nth-child(4){
+	font-weight: 550;
+	margin-left: 20px;
+}
+
+.form-main input[type="radio"]{
+	cursor: pointer;
+}
+
+/*button*/
+.buttons{
+	width: 200px;
+	margin: 30px 0 0 175px;
+}
+
+.buttons i{
+	margin-right: 4px;
+}
+
+.buttons a{
+	color: black;
+	border: 1px solid black;
+	width: 50px;
+	padding: 5px 10px;
+	border-radius: 4px;
+	text-decoration: none;
+	margin-right: 4px;
+	cursor: pointer;
+}
+
+.buttons a:hover{
+	border: 1px solid red;
+	color: red;
+}
+
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style_OrderDetail.css">
+
+    <link rel="stylesheet" href="../../css/avt.css">
+    <title>Chi tiết đơn hàng</title>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+<body>
+
+    <header>
+        <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li><a href="productAdmin.html">Sản phẩm</a></li>
+            <li><a href="orderAdmin.html">Đơn hàng</a></li>
+            <li><a href="userAdmin.html">Người dùng</a></li>
+            <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
+            <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+  
+  
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+                  
+            
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+  
+    </header>
+  
+  
+    
+  
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+  
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+          <a href="shop.html">
+            <button type="button" class="search-button">Search</button>
+          </a>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+    
+
+
+    <main>
+        
+        <section id="main">
+
+            <h2>Chi Tiết Đơn Hàng</h2>
+            <h1>Danh sách sản phẩm</h1>
+            <hr>
+            <table>
+                <!--noi dung tieu de-->
+            <tr class="title">
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th> <!--don gia/ san pham-->
+                <th>Tổng</th>
+            </tr>
+            <!--noi dung cac san pham-->
+            <tr class="product">
+                <td><a href="productDetail.html"><img src="../../images/8.jpg" alt="bike"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>1</td>
+                <td>16.490.000đ</td>
+                <td>16.490.000đ</td>
+            </tr>
+            <tr class="product">
+                <td><a href="productDetail.html"><img src="../../images/11.png" alt="bike1"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>1</td>
+                <td>16.490.000đ</td>
+                <td>16.490.000đ</td>
+            </tr>
+            <tr class="product">
+                <td><a href="productDetail.html"><img src="../../images/12.png" alt="bike2"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>2</td>
+                <td>16.490.000đ</td>
+                <td>32.980.000đ</td>
+            </tr>
+        </table>
+        <div id="main_infor"> 
+            <h1>Thông tin đơn hàng</h1>
+            <hr>
+                <form action="#" class="form-main">
+                    <div class="info"> <!--phan loai-->
+                        <label for="product_brand">Họ tên</label>
+                        <input type="text" value="son son" disabled>
+                    </div>
+                    <div class="info">
+                        <label for="product_name">Email</label>
+                        <input type="text" value="abbbbbbbbbbaaaa@gmail.com" disabled>
+                    </div>
+                    <div class="info">
+                        <label for="product_price">Điện thoại</label>
+                        <input type="text" value="0972296705" disabled>
+                    </div>
+                    <div class="info">
+                        <label for="product_ram">Địa chỉ</label>
+                        <input type="text" value="123 Trần Hưng Đạo, Quận 5, TpHCM" disabled>
+                    </div>
+                    <div class="info">
+                        <label for="product_quantity">Thanh toán</label>
+                        <input type="text" value="Thanh toán khi nhận hàng" disabled>
+                    </div>
+                    <div class="info">
+                        <label for="purchase_date">Ngày mua</label>
+                        <input type="text" value="24/11/2023" disabled>
+                    </div>
+                    <div class="option">
+                        <label for="product_quantity">Trạng thái</label>
+                        <select id="option" name="option" style="
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                            appearance: none;
+                            cursor: pointer;
+                        ">
+                        <option value="" disabled selected>Trạng thái <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="pending">Đang xử lý <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="shipped">Đã giao <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="completed">Hoàn tất <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="cancelled">Đã hủy <i class="fa-solid fa-caret-down"></i></option>
+                        </select>
+                    </div>
+                    
+                    
+                    <div class="buttons">
+                        <a href="thongKeLoai.html"><i class="fa-solid fa-x"></i>Đóng</a>
+                        <a onclick="warning()"><i class="fa-solid fa-download"></i>Lưu</a>
+                    </div>
+                </form>
+                </div>
+        </section>  
+    </main>
+    <script>
+        // js cua phan aside menu
+			function w3_open() {
+  				document.getElementById("main").style.marginLeft = "15%";
+  				document.getElementById("mySidebar").style.width = "15%";
+  				document.getElementById("mySidebar").style.display = "block";
+  				document.getElementById("openNav").style.display = 'none';
+				}
+			function w3_close() {
+  				document.getElementById("main").style.marginLeft = "0%";
+  				document.getElementById("mySidebar").style.display = "none";
+  				document.getElementById("openNav").style.display = "inline-block";
+			}
+
+            function warning(){
+				alert("Bạn đã lưu thành công !");
+				window.location.href = "thongKeLoai.html";
+            }
+    </script>
+
+<script src="../../java script/java.js"></script>  
+</body>

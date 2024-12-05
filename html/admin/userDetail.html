@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1acf2d22a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../css/style_AddProduct.css" />
+    <!-- css style - co the sua lai -->
+    <title>Thông tin người dùng</title>
+
+		<link rel="stylesheet" href="../../css/avt.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet"
+		href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+
+  </head>
+  <body>
+    <header>
+			<a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+			
+			<ul class="nav-menu">
+				<li><a href="productAdmin.html">Sản phẩm</a></li>
+				<li><a href="orderAdmin.html">Đơn hàng</a></li>
+				<li><a href="userAdmin.html">Người dùng</a></li>
+				<li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
+				<li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+			</ul>
+			
+			<!--thẻ <i> là thẻ chứ biểu tượng -->
+			<div class="nav-icon">
+				
+				<div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+	  
+	  
+				<a href="/html/user.html" class="chat-bubble">
+					<img src="/images/abc.jpg" alt="Avatar">
+					<span>Hi, zan</span>
+				</a>
+					  
+				
+				<div class= "bx bx-menu" id ="menu-icon"></div>
+			</div>
+	  
+		</header>
+	  
+		<!--tìm kiếm nâng cao-->    
+		<div class="search-container" id="searchPopup">
+			<h2>Advanced Product Search</h2>
+			
+			<!-- Search Form -->
+			<form id="searchForm">
+			  <!-- Product Name Field -->
+			  <div class="form-group">
+				<label for="productName">Product Name</label>
+				<input type="text" id="productName" name="productName" placeholder="Enter product name...">
+			  </div>
+			  
+			<!-- Category Selection -->
+			<div class="form-group">
+			<label for="category">Category</label>
+			<select id="category" name="category">
+				<option value="">Select category</option>
+				<option value="shoes">Sport</option>
+				<option value="nike-air">nike-air</option>
+				<option value="fastion">fastion</option>
+				<option value="accessories">giay siu dep</option>
+				<!-- Add more categories as needed -->
+			</select>
+			</div>
+	  
+			<div class="form-group">
+			<label for="category">For your</label>
+			<select id="category" name="category">
+				<option value="">Select category</option>
+				<option value="shoes">men</option>
+				<option value="nike-air">woman</option>
+				<option value="fastion">kid</option>
+				<!-- Add more categories as needed -->
+			</select>
+			</div>
+			  
+			  <!-- Price Range Fields -->
+			  <div class="form-group">
+				<label>Price Range</label>
+				<div class="price-range">
+				  <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+				  <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+				</div>
+			  </div>
+			  
+			  <!-- Search Button -->
+			  <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+			  <a href="productAdmin.html">
+				<button type="button" class="search-button">Search</button>
+			  </a>
+			</form>
+		  </div>
+		  
+		  <!-- Result Display Section -->
+		  <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+		</div>
+
+
+
+
+    <main>
+      
+      <section id="main">
+       
+        <h1>Thông Tin Người Dùng</h1>
+        <form action="#" id="formId" class="form_addProduct"  >
+          <div class="change_img">
+            <img
+              src="../../images/abc.jpg"
+              alt="avatar"
+              id="product_pic"
+              style="margin-bottom: 10px"
+            />
+          </div>
+          <div class="edit">
+            <label for="product_name">Loại người dùng</label>
+            <input type="text" value="Admin" disabled />
+          </div>
+          <div class="edit">
+            <label for="product_name">Tên</label>
+            <input type="text" value="zan zan" disabled />
+          </div>
+          <div class="edit">
+            <label for="product_price">Email</label>
+            <input type="text" value="zan zan@gmail.com" disabled />
+          </div>
+          <div class="buttons">
+            <a href="userAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
+            <a href="editUser.html"><i class="fas fa-edit"></i>Chỉnh sửa</a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script>
+      // js cua phan aside menu
+      function w3_open() {
+        document.getElementById("main").style.marginLeft = "15%";
+        document.getElementById("mySidebar").style.width = "15%";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("openNav").style.display = "none";
+      }
+      function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+      }
+
+      let productPic = document.getElementById("product_pic");
+      let inputFile = document.getElementById("input_file");
+
+      inputFile.onchange = function () {
+        productPic.src = URL.createObjectURL(inputFile.files[0]);
+      };
+
+      function warning() {
+        // Lấy tất cả các phần tử <input> trừ phần tử đầu tiên
+        var inputs = document.querySelectorAll("input:not(:first-child)");
+
+        // Kiểm tra từng phần tử <input>
+        for (var i = 0; i < inputs.length; i++) {
+          var inputValue = inputs[i].value;
+
+          if (inputValue == 0) {
+            alert("Bạn chưa điền đủ thông tin !!!");
+            return;
+          }
+        }
+        var result = confirm("Bạn có chắc muốn thêm sản phẩm này không ?");
+        if (result) alert("Bạn đã thêm thành công !");
+      }
+
+      //prevent refresh page
+      var form = document.getElementById("formId");
+      function submitForm(event) {
+        event.preventDefault();
+      }
+
+      //calling a function during form submission
+      form.addEventListener("submit", submitForm);
+    </script>
+
+<script src="../../java script/java.js"></script>  
+  </body>
+</html>
