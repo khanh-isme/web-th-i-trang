@@ -313,4 +313,10 @@ h2 {
     cursor: pointer;
 }
 
-
+.product-history{
+   border: 1px solid #484545;
+   margin-bottom: 10px;
+}
+.product-history-1{
+    display: flex;
+}

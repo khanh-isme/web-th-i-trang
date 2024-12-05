@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Interests Page</title>
+  <link rel ="stylesheet" href="../css/main.css">
+  <link rel ="stylesheet" href="../css/user.css">
+  <link rel ="stylesheet" href="../css/avt.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li> <a href="/html/index1.html "> home</a></li>
+            <li> <a href="/html/shop.html"> shop</a></li>
+                    
+            <li> <a href="# "> page </a></li>
+            <li> <a href="/html/cart.html"> cart</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+
+            <div class="cart-icon" onclick="toggleCartPopup()">
+
+                <i class='bx bx-cart' id="cart-icon"></i>
+            </div>
+
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+            
+           
+            
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+
+    </header>
+
+
+    <!-- Cart Popup -->
+    <div class="cart-popup" id="cartPopup">
+        <div class="cart-item">
+            <img src="../images/13.png" alt="Product Image">
+            <div class="cart-item-details">
+                <div class="cart-item-name">T-Shirt 14A</div>
+                <div class="cart-item-price">$50.05 x1</div>
+            </div>
+            <div class="cart-item-delete" onclick="removeItem()">
+                <i class='bx bxs-trash-alt' ></i>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <img src="../images/14.png" alt="Product Image">
+            <div class="cart-item-details">
+                <div class="cart-item-name">T-Shirt 14A</div>
+                <div class="cart-item-price">$50.05 x1</div>
+            </div>
+            <div class="cart-item-delete" onclick="removeItem()">
+                <i class='bx bxs-trash-alt' ></i>
+            </div>
+        </div>
+
+        <a href="/html/ship.html">
+            <p>see more...</p>
+        </a>
+
+
+        <div class="cart-total">Total: $100.10</div>
+        <a href="/html/bag.html">
+
+            <button class="checkout-btn">CHECK YOUR BAG</button>
+        </a>
+    </div>
+
+
+
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+          <a href="shop.html">
+            <button type="button" class="search-button">Search</button>
+          </a>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="../images/abc.jpg" alt="User Avatar">
+            <div class="user-info">
+                <h1>Zan Khanh</h1>
+                <p>Nike Member Since November 2024</p>
+            </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="interests-section">
+            <h2>Interests</h2>
+            <div class="tabs">
+                <a href="#" class="active">All</a>
+                <a href="#">Sports</a>
+                <a href="#">Products</a>
+                <a href="#">Teams</a>
+                <a href="#">Athletes</a>
+                <a href="#">Cities</a>
+        </div>
+        <p class="info">Add your interests to shop a collection of products that are based on what you're into.</p>
+            <div class="cards">
+                <!-- Add Interests Card -->
+                <div class="card add-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+                        <line x1="12" y1="8" x2="12" y2="16" stroke-width="2"></line>
+                        <line x1="8" y1="12" x2="16" y2="12" stroke-width="2"></line>
+                    </svg>
+                Add Interests
+                </div>
+
+                <!-- Interest Cards -->
+                <div class="card">
+                    <img src="../images/43.jpg" alt="Basketball">
+                    <h3>Basketball</h3>
+                </div>
+                <div class="card">
+                    <img src="../images/41.jpg" alt="Cross Training">
+                    <h3>Cross Training</h3>
+                </div>
+                <div class="card">
+                    <img src="../images/40.jpg" alt="Dance">
+                    <h3>Run</h3>
+                </div>
+            </div>
+
+            <h2>History</h2>
+            <div class="history">
+                <p>Arrives Wed, Nov 13 - Tue, Nov 19</p>
+                <div class="product-history">
+                    <div class="product-history-1">
+
+                        <img src="../images/12.png" alt="Product Image">
+                        <div class="product-history-p">
+
+                            <p>Qty: 1</p>
+                            <p>Size: EU 43</p>
+                        </div>
+                    </div>
+
+                    <p>LeBron XXII "Crown Jewel" EP Basketball Shoes</p>
+                    
+                </div>
+
+                
+                <div class="product-history">
+                    <div class="product-history-1">
+
+                        <img src="../images/11.png" alt="Product Image">
+                        <div class="product-history-p">
+
+                            <p>Qty: 1</p>
+                            <p>Size: EU 43</p>
+                        </div>
+                    </div>
+
+                    <p>LeBron XXII "Crown Jewel" EP Basketball Shoes</p>
+                    
+                </div>
+            </div>
+
+            <div class="history">
+                <p>Arrives Wed, Nov 13 - Tue, Nov 19</p>
+                <div class="product-history">
+                    <div class="product-history-1">
+
+                        <img src="../images/10.png" alt="Product Image">
+                        <div class="product-history-p">
+
+                            <p>Qty: 1</p>
+                            <p>Size: EU 43</p>
+                        </div>
+                    </div>
+
+                    <p>LeBron XXII "Crown Jewel" EP Basketball Shoes</p>
+                    
+                </div>
+
+                
+                <div class="product-history">
+                    <div class="product-history-1">
+
+                        <img src="../images/14.png" alt="Product Image">
+                        <div class="product-history-p">
+
+                            <p>Qty: 1</p>
+                            <p>Size: EU 43</p>
+                        </div>
+                    </div>
+
+                    <p>LeBron XXII "Crown Jewel" EP Basketball Shoes</p>
+                    
+                </div>
+            </div>
+
+
+        </div>
+  </div>
+
+
+
+
+
+  <script src="/java script/java.js "></script>
+</body>
+</html>

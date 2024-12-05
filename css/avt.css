@@ -1,0 +1,23 @@
+.chat-bubble {
+    display: flex;
+    align-items: center;
+    background-color:  #587661; /* Màu nền chat */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+  }
+
+  .chat-bubble img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd; /* Màu nền cho ảnh đại diện nếu không có */
+  }
+
+  .chat-bubble span {
+    font-size: 14px;
+    font-weight: 500;
+  }

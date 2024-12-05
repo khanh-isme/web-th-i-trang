@@ -187,33 +187,100 @@ header.sticky{
 .checkout-btn:hover {
     opacity: 0.9;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filter-section {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .filter-header {
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+
+  .filter-header::after {
+    margin-right: 100px;
+    content: "▲";
+    font-size: 15px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  .filter-header.collapsed::after {
+    transform: rotate(180deg);
+  }
+
+  .filter-options {
+    margin-top: 10px;
+    display: none;
+  }
+
+  .filter-options a{
+    margin-bottom: 10px;
+    display: block;
     
+  }
 
+  .filter-header-color {
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+  .filter-header-color::after {
+    margin-right: 100px;
+    content: "▲";
+    font-size: 15px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  .filter-header-color.collapsed::after {
+    transform: rotate(180deg);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .filter-header-collection {
+    font-weight: bolder;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+  .filter-header-collection::after {
+    margin-right: 100px;
+    content: "▲";
+    font-size: 15px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  .filter-header-collection.collapsed::after {
+    transform: rotate(180deg);
+  }
 
 
 
@@ -221,8 +288,7 @@ header.sticky{
 
 
 body {
-    font-family: Arial, sans-serif;
-    color: #2c2c2c;
+   
     background-color: #f8f8f8;
 }
 
@@ -245,9 +311,7 @@ body {
     color: #000 ;
 }
 
-.filter-group {
-    margin-bottom: 20px;
-}
+
 
 .main {
     width: 80%;
@@ -322,3 +386,6 @@ body {
     background-color: #000;
     border-radius: 5px;
 }
+
+
+
