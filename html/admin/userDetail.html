@@ -10,7 +10,7 @@
     ></script>
     <link rel="stylesheet" href="../../css/style_AddProduct.css" />
     <!-- css style - co the sua lai -->
-    <title>Thông tin người dùng</title>
+    <title>User's information</title>
 
 		<link rel="stylesheet" href="../../css/avt.css">
 
@@ -29,11 +29,11 @@
 			<a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
 			
 			<ul class="nav-menu">
-				<li><a href="productAdmin.html">Sản phẩm</a></li>
-				<li><a href="orderAdmin.html">Đơn hàng</a></li>
-				<li><a href="userAdmin.html">Người dùng</a></li>
-				<li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-				<li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+        <li><a href="productAdmin.html">Products</a></li>
+        <li><a href="orderAdmin.html">Orders</a></li>
+        <li><a href="userAdmin.html">Users</a></li>
+        <li><a href="thongKeAdmin.html">Product statistics</a></li>
+        <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
 			</ul>
 			
 			<!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -117,7 +117,7 @@
       
       <section id="main">
        
-        <h1>Thông Tin Người Dùng</h1>
+        <h1>User's information</h1>
         <form action="#" id="formId" class="form_addProduct"  >
           <div class="change_img">
             <img
@@ -128,11 +128,11 @@
             />
           </div>
           <div class="edit">
-            <label for="product_name">Loại người dùng</label>
+            <label for="product_name">User type</label>
             <input type="text" value="Admin" disabled />
           </div>
           <div class="edit">
-            <label for="product_name">Tên</label>
+            <label for="product_name">Name</label>
             <input type="text" value="zan zan" disabled />
           </div>
           <div class="edit">
@@ -140,8 +140,8 @@
             <input type="text" value="zan zan@gmail.com" disabled />
           </div>
           <div class="buttons">
-            <a href="userAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
-            <a href="editUser.html"><i class="fas fa-edit"></i>Chỉnh sửa</a>
+            <a href="userAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
+            <a href="editUser.html"><i class="fas fa-edit"></i>Edit</a>
           </div>
         </form>
       </section>
@@ -176,12 +176,12 @@
           var inputValue = inputs[i].value;
 
           if (inputValue == 0) {
-            alert("Bạn chưa điền đủ thông tin !!!");
+            alert("Please specify the boxes!");
             return;
           }
         }
-        var result = confirm("Bạn có chắc muốn thêm sản phẩm này không ?");
-        if (result) alert("Bạn đã thêm thành công !");
+        var result = confirm("Add product?");
+        if (result) alert("Added successfully!");
       }
 
       //prevent refresh page

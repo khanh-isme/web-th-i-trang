@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adidas Clone</title>
-    <link rel="stylesheet" href="../css/main.css"> 
-    <link rel="stylesheet" href="../css/bag.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +14,9 @@
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
+
+
+
     
     <header>
         <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
@@ -32,7 +34,6 @@
             
             <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-            <a href = "/html/login.html" ><i class='bx bx-user'></i></a>
 
 
             <div class="cart-icon" onclick="toggleCartPopup()">
@@ -140,127 +141,41 @@
       <!-- Result Display Section -->
       <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
     </div>
-
-   
-
-
-
-
-
-
-    <section class="product-section-cart">
-        <div class="product-page">
-            <div class="product-gallery">
-                <div class="thumbnails">
-                    <img src="../images/12.png" alt="Thumbnail 1">
-                    <img src="../images/12.png" alt="Thumbnail 2">
-                    <img src="../images/12.png" alt="Thumbnail 3">
-                    <img src="../images/12.png" alt="Thumbnail 4">
-                    <img src="../images/12.png" alt="Thumbnail 5">
-                </div>
-                <div class="main-image">
-                    <img src="../images/11.png" alt="Nike V2K Run GORE-TEX">
-                </div>
-            </div>
-            
-            <div class="product-details">
-                <h1>Nike V2K Run GORE-TEX</h1>
-                <p class="category">Women's Waterproof Shoes</p>
-                <p class="price"> $ 100</p>
-                <div class="size-selection">
-                    <h3>Select Size</h3>
-                    <div class="sizes">
-                        <button>EU 35.5</button>
-                        <button>EU 36</button>
-                        <button>EU 36.5</button>
-                        <button>EU 37.5</button>
-                        <button>EU 38</button>
-                        <button>EU 38.5</button>
-                        <button>EU 39</button>
-                        <button>EU 40</button>
-                        <button>EU 40.5</button>
-                        <button disabled>EU 41</button>
-                    </div>
-                </div>
-                <a  href="bag.html">
-
-                    <button class="add-to-bag">Add to Bag</button>
-                </a>
-                <button class="favourite">Favourite ♥</button>
-                <p class="notice">This product is excluded from site promotions and discounts.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="product-section-a">
-        <h2>New Arrivals Just Landed</h2>
-        
-        <div class="product-container-a">
-            <div class="product-a">
-
-                <a href="product.html">
-                <img src="../images/11.png" alt="Nike C1TY 'Brownstone'">
-                </a>
-                
-                <h3>Nike C1TY 'Brownstone'</h3>
-                <p>Shoes</p>
-                <p class="price">99$</p>
-            </div>
-            <div class="product-a">
-                <a href="product.html">
-
-                    <img src="../images/14.png" alt="Nike Air Force 1 Shadow">
-                    <h3>Nike Air Force 1 Shadow</h3>
-                    <p>Women's Shoes</p>
-                    <p class="price">100$</p>
-                </a>
-            </div>
-            <div class="product-a">
-                <a href="product.html">
-                
-                    <img src="../images/8.jpg" alt="Nike Zoom Vomero Roam">
-                    <h3>Nike Zoom Vomero Roam</h3>
-                    <p>Men's Winterized Shoes</p>
-                    <p class="price">500$</p>
-                </a>
-            </div>
-            <div class="product-a">
-                <a href="product.html">
-                
-                    <img src="../images/7.png" alt="Nike Zoom Vomero Roam">
-                    <h3>Nike Zoom Vomero Roam</h3>
-                    <p>Men's Winterized Shoes</p>
-                    <p class="price">200$</p>
-                </a>
-            </div>
-            <div class="product-a">
-                <a href="product.html">
-                
-                    <img src="../images/12.png" alt="Nike Zoom Vomero Roam">
-                    <h3>Nike Zoom Vomero Roam</h3>
-                    <p>Men's Winterized Shoes</p>
-                    <p class="price">500$</p>
-                </a>
-            </div>
-            <div class="product-a">
-                <a href="product.html">
-                
-                    <img src="../images/13.png" alt="Nike Zoom Vomero Roam">
-                    <h3>Nike Zoom Vomero Roam</h3>
-                    <p>Men's Winterized Shoes</p>
-                    <p class="price">100$x</p>
-                </a>
-            </div>
-            <!-- Thêm các sản phẩm khác ở đây -->
-        </div>
-        
-    </div>
-
-
-
+    
 
 
     
-    <script src="/java script/java.js"></script>
+
+    <section class="login-section">
+    <div class="login-container">
+        <div class="avatar">
+            <img src="../images/khanh.png" alt="User Avatar">
+        </div>
+        <section>
+            <div class="input-container">
+                <i class="icon"><i class='bx bxs-envelope'></i>&nbsp;</i>
+                <input type="text" placeholder="User name" name="User name" required>
+            </div>
+            <div class="input-container">
+                <i class="icon"><i class='bx bxs-lock-alt' ></i>&nbsp;</i>
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <div class="input-container">
+                <i class="icon"><i class='bx bxs-envelope'></i>&nbsp;</i>
+                <input type="text" placeholder="Email ID" name="email" required>
+            </div>
+            <div class="regester">
+                <a href="ship.html">
+                    <button type="submit">REGISTER</button>
+                </a>
+            </div>
+            
+
+        </section>
+    </div>
+    </section>
+
+
+
 </body>
 </html>

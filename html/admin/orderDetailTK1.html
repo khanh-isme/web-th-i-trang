@@ -8,7 +8,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/style_OrderDetail.css">
-    <title>Chi tiết đơn hàng</title>
+    <title>Order detail</title>
 </head>
 <body>
     <header>
@@ -22,7 +22,7 @@
                 </li>
                 <div class="right">
                     <li>
-                        <input type="text" placeholder="Tên sản phẩm..."> 
+                        <input type="text" placeholder="Product name..."> 
                         <a href="productAdmin.html"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </li>
                     <li>
@@ -35,57 +35,57 @@
     <main>
         <aside id="mySidebar">
             <ul>
-                <li><a onclick="w3_close()">Đóng &times;</a></li>
-                <li><a href="productAdmin.html">Sản phẩm</a></li>
-                <li><a href="orderAdmin.html">Đơn hàng</a></li>
-                <li><a href="userAdmin.html">Người dùng</a></li>
-                <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-                <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+                <li><a onclick="w3_close()">Close &times;</a></li>
+                <li><a href="productAdmin.html">Products</a></li>
+			    <li><a href="orderAdmin.html">Orders</a></li>
+			    <li><a href="userAdmin.html">Users</a></li>
+			    <li><a href="thongKeAdmin.html">Product statistics</a></li>
+			    <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
             </ul>
         </aside>
         <section id="main">
             <button id="openNav" class="menu-button" onclick="w3_open()">&#9776; Menu</button>
-            <h2>Chi Tiết Đơn Hàng</h2>
-            <h1>Danh sách sản phẩm</h1>
+            <h2>Order's detail</h2>
+            <h1>Product list</h1>
             <hr>
             <table>
                 <!--noi dung tieu de-->
             <tr class="title">
-                <th>Hình ảnh</th>
-                <th>Tên sản phẩm</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th> <!--don gia/ san pham-->
-                <th>Tổng</th>
+                <th>Image</th>
+                <th>Product name</th>
+                <th>Quantity</th>
+                <th>Price</th> <!--don gia/ san pham-->
+                <th>Total</th>
             </tr>
             <!--noi dung cac san pham-->
             <tr class="product">
-                <td><a href="productDetail.html"><img src="../../img/bike1.jpg" alt="bike1"></a></td>
+                <td><a href="productDetail.html"><img src="../../images/8.jpg" alt="bike"></a></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
                 <td>1</td>
-                <td>16.490.000đ</td>
-                <td>16.490.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
             </tr>
             <tr class="product">
-                <td><a href="productDetail.html"><img src="../../img/bike2.jpg" alt="bike2"></a></td>
+                <td><a href="productDetail.html"><img src="../../images/11.png" alt="bike1"></a></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
                 <td>1</td>
-                <td>16.490.000đ</td>
-                <td>16.490.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
             </tr>
             <tr class="product">
-                <td><a href="productDetail.html"><img src="../../img/bike3.jpg" alt="bike3"></a></td>
+                <td><a href="productDetail.html"><img src="../../images/12.png" alt="bike2"></a></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
                 <td>2</td>
-                <td>16.490.000đ</td>
-                <td>32.980.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
             </tr>
         </table>
         <div id="main_infor"> 
-            <h1>Thông tin đơn hàng</h1>
+            <h1>Order's information</h1>
             <hr>
                 <form action="#">
                     <div class="info"> <!--phan loai-->
-                        <label for="product_brand">Họ tên</label>
+                        <label for="product_brand">Name</label>
                         <input type="text" value="Nguyễn Ân" disabled>
                     </div>
                     <div class="info">
@@ -93,23 +93,23 @@
                         <input type="text" value="anhnguyen123@gmail.com" disabled>
                     </div>
                     <div class="info">
-                        <label for="product_price">Điện thoại</label>
+                        <label for="product_price">Phone number</label>
                         <input type="text" value="0933159357" disabled>
                     </div>
                     <div class="info">
-                        <label for="product_ram">Địa chỉ</label>
+                        <label for="product_ram">Address</label>
                         <input type="text" value="123 Trần Hưng Đạo, Quận 5, TpHCM" disabled>
                     </div>
                     <div class="info">
-                        <label for="product_quantity">Thanh toán</label>
-                        <input type="text" value="Thanh toán khi nhận hàng" disabled>
+                        <label for="product_quantity">Purchase method</label>
+                        <input type="text" value="Cash on delivery" disabled>
                     </div>
                     <div class="info">
-                        <label for="purchase_date">Ngày mua</label>
+                        <label for="purchase_date">Purchase date</label>
                         <input type="text" value="24/11/2023" disabled>
                     </div>
                     <div class="option">
-                        <label for="product_quantity">Trạng thái</label>
+                        <label for="product_quantity">Status</label>
                         <select id="option" name="option" style="
                             padding: 0.5rem;
                             border: 1px solid #ccc;
@@ -120,17 +120,17 @@
                             appearance: none;
                             cursor: pointer;
                         ">
-                        <option value="" disabled selected>Trạng thái <i class="fa-solid fa-caret-down"></i></option>
-                        <option value="pending">Đang xử lý <i class="fa-solid fa-caret-down"></i></option>
-                        <option value="shipped">Đã giao <i class="fa-solid fa-caret-down"></i></option>
-                        <option value="completed">Hoàn tất <i class="fa-solid fa-caret-down"></i></option>
-                        <option value="cancelled">Đã hủy <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="" disabled selected>Status <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="pending">Pending<i class="fa-solid fa-caret-down"></i></option>
+                        <option value="shipped">Shipped <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="completed">Completed <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="cancelled">Cancelled<i class="fa-solid fa-caret-down"></i></option>
                         </select>
                     </div>
                     
                     
                     <div class="buttons">
-                        <a href="thongKeAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
+                        <a href="thongKeAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
                     </div>
                 </form>
                 </div>

@@ -23,11 +23,11 @@
 			<a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
 			
 			<ul class="nav-menu">
-				<li><a href="productAdmin.html">Sản phẩm</a></li>
-				<li><a href="orderAdmin.html">Đơn hàng</a></li>
-				<li><a href="userAdmin.html">Người dùng</a></li>
-				<li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-				<li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+				<li><a href="productAdmin.html">Products</a></li>
+				<li><a href="orderAdmin.html">Orders</a></li>
+				<li><a href="userAdmin.html">Users</a></li>
+				<li><a href="thongKeAdmin.html">Product statistics</a></li>
+				<li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
 			</ul>
 			
 			<!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -108,22 +108,22 @@
 			
 			<section id="main"> 
 				
-				<h1>Sửa Thông Tin Người Dùng</h1>
+				<h1>Edit user's information</h1>
                     <form action="#"  class="form_addProduct">
 						<div class="change_img">
 							<img src="../../images/abc.jpg" alt="userAvatar" id="user_pic">
-							<label for="input_file" class="change_button">Thay đổi</label>
+							<label for="input_file" class="change_button">Change avatar</label>
 							<input type="file" id="input_file" accept="image/*">
 						</div>
 						<div class="edit"> <!--phan loai user-->
-							<label for="loaiUser">Loại người dùng</label>
+							<label for="loaiUser">User type</label>
 							<select name="loaiUser" id="loaiUser">
 								<option value="admin">Admin</option>
-								<option value="client">Khách hàng</option>
+								<option value="client">Customer</option>
 							</select>
 						</div>
 						<div class="edit">
-							<label for="user_name">Tên</label>
+							<label for="user_name">Name</label>
 							<input type="text" name="user_name" value="zan zan ">
 						</div>
 						<div class="edit">
@@ -131,8 +131,8 @@
 							<input type="text" name="email" value="zanzan@gmail.com">
 						</div>
 						<div class="buttons">
-							<a href="userAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
-							<a onclick="warning()"><i class="fa-solid fa-download"></i>Cập nhật</a>
+							<a href="userAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
+							<a onclick="warning()"><i class="fa-solid fa-download"></i>Update</a>
 						</div>
                     </form>
             </section>    
@@ -167,7 +167,7 @@
     var inputValue = inputs[i].value.trim(); // Loại bỏ khoảng trắng thừa
 
     if (!inputValue) {
-      alert("Bạn chưa điền đủ thông tin !!!");
+      alert("Please specify the boxes!");
       return;
     }
   }
@@ -175,11 +175,11 @@
   // Kiểm tra trường <textarea> trong <main>
   var textarea = document.querySelector("main textarea");
   if (textarea && !textarea.value.trim()) {
-    alert("Bạn chưa điền đủ thông tin !!!");
+    alert("Please specify the boxes!");
     return;
   }
 
-  alert("Bạn đã thêm thành công !");
+  alert("Updated successfully!");
   window.location.href = "userAdmin.html";
 }
 			//prevent refresh page

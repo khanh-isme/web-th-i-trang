@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/avt.css">
 
     <!-- css style - co the sua lai -->
-    <title>Người dùng</title>
+    <title>User</title>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +27,11 @@
       <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
       
       <ul class="nav-menu">
-          <li><a href="productAdmin.html">Sản phẩm</a></li>
-          <li><a href="orderAdmin.html">Đơn hàng</a></li>
-          <li><a href="userAdmin.html">Người dùng</a></li>
-          <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-          <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+          <li><a href="productAdmin.html">Products</a></li>
+        <li><a href="orderAdmin.html">Orders</a></li>
+        <li><a href="userAdmin.html">Users</a></li>
+        <li><a href="thongKeAdmin.html">Product statistics</a></li>
+        <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
       </ul>
       
       <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -121,28 +121,28 @@
       
       <section id="main">
        
-        <h1>Người Dùng</h1>
+        <h1>User</h1>
         <!--create button-->
         <!-- mình dùng lại code của trang sửa thông tin sản phẩm -->
         <a href="addUser.html" class="create-button"
-          ><i class="fas fa-plus"></i> Thêm</a
+          ><i class="fas fa-plus"></i> Add</a
         >
         <!-- user's information list-->
         <table>
           <!--noi dung tieu de-->
           <tr class="title">
-            <th>Mã</th>
+            <th>User code</th>
             <th>Avatar</th>
-            <th>Người dùng</th>
+            <th>Username</th>
             <th>Email</th>
-            <th>Loại người dùng</th>
-            <th>Chức năng</th>
+            <th>User's type</th>
+            <th>Edit</th>
             <!-- Actions gồm thêm, sửa, khóa (không cho người dùng đăng nhập)-->
-            <th>Khóa người dùng</th>
+            <th>Lock user</th>
           </tr>
           <!--thong tin users -->
           <tr class="user">
-            <td>#1</td>
+            <td>#4</td>
             <td>
               <a href="userDetail.html"
                 ><img src="../../images/abc.jpg" alt="per1"
@@ -154,7 +154,7 @@
             <td>
               <a href="editUser.html" class="action-button">
                 <i class="fas fa-edit"></i>
-                <div class="action-tooltip">Chỉnh sửa</div>
+                <div class="action-tooltip">Edit</div>
               </a>
               <!-- <a class="action-button" onclick="warning(this)">
                                 <i class="fas fa-trash-alt"></i>
@@ -166,19 +166,19 @@
             </td>
           </tr>
           <tr class="user">
-            <td>#2</td>
+            <td>#5</td>
             <td>
               <a href="userDetail.html"
                 ><img src="../../images/meow.jpg" alt="per2"
               /></a>
             </td>
             <td>Thanh Son</td>
-            <td>asdasda@gmail.com</td>
-            <td>Khách hàng</td>
+            <td>vanvatthuaalen@gmail.com</td>
+            <td>Customer</td>
             <td>
               <a href="editUser.html" class="action-button">
                 <i class="fas fa-edit"></i>
-                <div class="action-tooltip">Chỉnh sửa</div>
+                <div class="action-tooltip">Edit</div>
               </a>
               <!-- <a class="action-button" onclick="warning(this)">
                                 <i class="fas fa-trash-alt"></i>
@@ -190,7 +190,7 @@
             </td>
           </tr>
           <tr class="user">
-            <td>#3</td>
+            <td>#6</td>
             <td>
               <a href="userDetail.html"
                 ><img src="../../images/meow1.jpg" alt="per3"
@@ -198,11 +198,11 @@
             </td>
             <td>Như Xinh</td>
             <td>asdasdas@gmail.com</td>
-            <td>Khách hàng</td>
+            <td>Customer</td>
             <td>
               <a href="editUser.html" class="action-button">
                 <i class="fas fa-edit"></i>
-                <div class="action-tooltip">Chỉnh sửa</div>
+                <div class="action-tooltip">Edit</div>
               </a>
               <!-- <a class="action-button" onclick="warning(this)">
                                 <i class="fas fa-trash-alt"></i>
@@ -236,7 +236,7 @@
 
         //js xoa
         function warning(e) {
-          var result = confirm("Bạn chắc chắn muốn xóa người dùng này ?");
+          var result = confirm("Delete user?");
           if (result) e.closest("tr").remove();
         }
       </script>

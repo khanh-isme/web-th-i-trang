@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style_Thongke.css">
-    <title>Thống kê theo loại sản phẩm</title>
+    <title>Statistics by product's category</title>
 
 
     <link rel="stylesheet" href="../../css/avt.css">
@@ -24,11 +24,11 @@
         <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li><a href="productAdmin.html">Sản phẩm</a></li>
-            <li><a href="orderAdmin.html">Đơn hàng</a></li>
-            <li><a href="userAdmin.html">Người dùng</a></li>
-            <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-            <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+            <li><a href="productAdmin.html">Products</a></li>
+            <li><a href="orderAdmin.html">Orders</a></li>
+            <li><a href="userAdmin.html">Users</a></li>
+            <li><a href="thongKeAdmin.html">Product statistics</a></li>
+            <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -109,12 +109,12 @@
 
     <section id="main">
        
-        <h1>Thống Kê</h1>
+        <h1>Statistics</h1>
         <!--product list-->
         <div class="filter">
             <!--chon filter-->
-            <span><input type="radio" name="chon" value="ten" id="ten" onclick="checkTen()" >Theo tên sản phẩm</span>
-            <span><input type="radio" name="chon" value="loai" id="loai" onclick="checkLoai()" checked>Theo loại sản phẩm</span>
+            <span><input type="radio" name="chon" value="ten" id="ten" onclick="checkTen()" >By name</span>
+            <span><input type="radio" name="chon" value="loai" id="loai" onclick="checkLoai()" checked>By category</span>
             <!--thong ke theo ten sp-->
             <input type="text" name="tenSp" id="tenSp" value="KIDS BIKE"style="display:none">
             <!--thong ke theo loai san pham-->
@@ -123,51 +123,51 @@
                 <option value="moutain">MOUTAIN</option>
             </select>
             <div class="date">
-                <label for="start">Từ ngày: </label>
+                <label for="start">From: </label>
                 <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
-                <label for="start">đến </label>
+                <label for="start">to </label>
                 <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
             </div>
-            <a onclick="move()" class="thongKe"></i>Thống kê</a>
+            <a onclick="move()" class="thongKe"></i>Submit</a>
         </div>
         
         <table>
             <!--noi dung tieu de-->
             <tr class="title">
-                <th>Mã đơn hàng</th>
-                <th>Khách hàng</th>
-                <th>Địa chỉ</th>
-                <th>Thành tiền</th>
-                <th>Trạng thái</th>
-                <th>Số Lượng / Đơn Hàng</th>
+                <th>Order's code</th>
+                <th>Customer</th>
+                <th>Address</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Quantity</th>
             </tr>
             <!--noi dung cac san pham-->
             <tr class="product">
                 <td><a href="orderDetailLoai.html">#1</a></td>
-                <td>Trọng Hiếu</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã nhận</td>
+                <td>Vuong Lam</td>
+                <td>666 Nguyen Thien Thuat, P8, Q1, TpHCM</td>
+                <td>$59.99</td>
+                <td class="state">Received</td>
                 <td>2</td>
             </tr>
             <tr class="product">
                 <td><a href="orderDetailLoai.html">#2</a></td>
-                <td>Nguyễn Ân</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã nhận</td>
+                <td>Khanh</td>
+                <td>63 Nguyen Thien Thuat, P8, Q1, TpHCM</td>
+                <td>$39.99</td>
+                <td class="state">Received</td>
                 <td>1</td>
             </tr>
             <tr class="product">
                 <td><a href="orderDetailLoai.html">#3</a></td>
-                <td>Mr.Thanh</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã nhận</td>
+                <td>Dr. Thanh</td>
+                <td>113 Hong Bang, P Tan Phu, Q Binh Tan, TpHCM</td>
+                <td>$60</td>
+                <td class="state">Received</td>
                 <td>3</td>
             </tr>
             <tr class="product sum">
-                <td colspan="5" class="tong">Tổng</td>
+                <td colspan="5" class="tong">Total</td>
                 <td>6</td>
             </tr>
         </table>
@@ -204,7 +204,7 @@
             
             function move(){
                 if(ten.checked == true && tenSp.value==''){
-                    alert("Vui lòng nhập tên sản phẩm");
+                    alert("Please enter product's name!");
                 }
                 else if(ten.checked == true && tenSp.value!=''){
                     window.location.href ="thongKeTen.html";

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../css/style_AddProduct.css" />
     <link rel="stylesheet" href="../../css/avt.css">
     <!-- css style - co the sua lai -->
-    <title>Thêm sản phẩm</title>
+    <title>Add products</title>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +27,11 @@
       <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
       
       <ul class="nav-menu">
-          <li><a href="productAdmin.html">Sản phẩm</a></li>
-          <li><a href="orderAdmin.html">Đơn hàng</a></li>
-          <li><a href="userAdmin.html">Người dùng</a></li>
-          <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-          <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+          <li><a href="productAdmin.html">Products</a></li>
+          <li><a href="orderAdmin.html">Orders</a></li>
+          <li><a href="userAdmin.html">Users</a></li>
+          <li><a href="thongKeAdmin.html">Product statistics</a></li>
+          <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
       </ul>
       
       <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -118,41 +118,41 @@
      
       <section id="main">
         
-        <h1>Thêm Sản Phẩm</h1>
+        <h1>Add products</h1>
         <form action="#" id="formId" class="form_addProduct">
           <div class="change_img">
             <img src="../../img/pic.png" alt="shoes" id="product_pic"  />
-            <label for="input_file" class="change_button">Thêm</label>
+            <label for="input_file" class="change_button">Add an image</label>
             <input type="file" id="input_file" accept="image/*" />
           </div>
           <div class="edit">
             <!--phan loai-->
-            <label for="product_brand">Loại</label>
+            <label for="product_brand">Category</label>
             <select name="product_brand" id="product_name">
               <option value="kids">KIDS</option>
               <option value="moutain">MOUTAIN</option>
             </select>
           </div>
           <div class="edit">
-            <label for="product_name">Tên</label>
+            <label for="product_name">Name</label>
             <input type="text" name="product_name" required />
           </div>
           <div class="edit">
-            <label for="product_price">Giá</label>
+            <label for="product_price">Price</label>
             <input type="text" name="product_price" required />
           </div>
           <div class="edit">
-            <label for="product_quantity">Số lượng</label>
+            <label for="product_quantity">Quantity</label>
             <input type="number" name="product_quantity" required />
           </div>
           <div class="edit">
-            <label for="product_quantity">Mô tả</label>
+            <label for="product_quantity">Description</label>
             <textarea name="textarea_field"></textarea>
           </div>
           <div class="buttons">
-            <a href="productAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
+            <a href="productAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
             <a onclick="warning()" class="save" id="saveButton"
-              ><i class="fa-solid fa-plus"></i>Thêm</a
+              ><i class='bx bx-check'></i>Submit</a
             >
           </div>
         </form>
@@ -177,7 +177,7 @@
           var inputValue = inputs[i].value.trim(); // Loại bỏ khoảng trắng thừa
 
           if (!inputValue) {
-            alert("Bạn chưa điền đủ thông tin !!!");
+            alert("Please specify the boxes!");
             return;
           }
         }
@@ -185,11 +185,11 @@
         // Kiểm tra trường <textarea> trong <main>
         var textarea = document.querySelector("main textarea");
         if (textarea && !textarea.value.trim()) {
-          alert("Bạn chưa điền đủ thông tin !!!");
+          alert("Please specify the boxes!");
           return;
         }
 
-      alert("Bạn đã thêm thành công !");
+      alert("Added successfully!");
       window.location.href = "productAdmin.html";
     }
 

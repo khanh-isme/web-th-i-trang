@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style_Thongke.css">
-    <title>Thống kê</title>
+    <title>Statistical</title>
 
     <link rel="stylesheet" href="../../css/avt.css">
 
@@ -23,11 +23,11 @@
         <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li><a href="productAdmin.html">Sản phẩm</a></li>
-            <li><a href="orderAdmin.html">Đơn hàng</a></li>
-            <li><a href="userAdmin.html">Người dùng</a></li>
-            <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-            <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+            <li><a href="productAdmin.html">Products</a></li>
+            <li><a href="orderAdmin.html">Orders</a></li>
+            <li><a href="userAdmin.html">Users</a></li>
+            <li><a href="thongKeAdmin.html">Product statistics</a></li>
+            <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -112,62 +112,62 @@
    
     <section id="main">
 
-        <h1>Thống Kê</h1>
+        <h1>Statistics</h1>
         <!--product list-->
         <div class="filter">
             <!--chon filter-->
-            <span><input type="radio" name="chon" value="ten" id="ten" onclick="checkTen()" checked>Theo tên sản phẩm</span>
-            <span><input type="radio" name="chon" value="loai" id="loai" onclick="checkLoai()">Theo loại sản phẩm</span>
+            <span><input type="radio" name="chon" value="ten" id="ten" onclick="checkTen()" checked>By name</span>
+            <span><input type="radio" name="chon" value="loai" id="loai" onclick="checkLoai()">By category</span>
             <!--thong ke theo ten sp-->
-            <input type="text" name="tenSp" id="tenSp" placeholder="Tên sản phẩm">
+            <input type="text" name="tenSp" id="tenSp" placeholder="Product name">
             <!--thong ke theo loai san pham-->
             <select name="loaiSp" id="loaiSp">
                 <option value="kids">KIDS</option>
                 <option value="moutain">MOUTAIN</option>
             </select>
             <div class="date">
-                <label for="start">Từ ngày: </label>
+                <label for="start">From: </label>
                 <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
-                <label for="start">đến </label>
-                <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
+                <label for="start">to </label>
+                <input type="date" id="end" name="end" value="2024-12-07" min="2018-01-01" max="2023-12-31">
             </div>
-            <a onclick="move()" class="thongKe"></i>Thống kê</a>
+            <a onclick="move()" class="thongKe"></i>Submit</a>
         </div>
         
         <table>
             <!--noi dung tieu de-->
             <tr class="title">
-                <th>Ảnh</th>
-                <th>Tên sản phẩm</th>
-                <th>Đơn giá</th>
-                <th>Tổng tiền</th>
-                <th>Số lượng bán</th>
-                <th>Hóa đơn</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Quantity</th>
+                <th>Bill</th>
             </tr>
             <!--noi dung cac san pham-->
             <tr class="product">
                 <td><img style="width: 100px; height: 100px;" src="../../images/10.png" alt=""></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
-                <td>16.490.000đ</td>
-                <td>16.490.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
                 <td class="state">2</td>
-                <td><a href="orderAdmin.html">xem hóa đơn</a></td>
+                <td><a href="orderAdmin.html">see bill</a></td>
             </tr>
             <tr class="product">
                 <td><img style="width: 100px; height: 100px;" src="../../images/11.png" alt=""></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
-                <td>16.490.000đ</td>
-                <td>16.490.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
                 <td class="state">2</td>
-                <td><a href="orderAdmin.html">xem hóa đơn</a></td>
+                <td><a href="orderAdmin.html">see bill</a></td>
             </tr>
             <tr class="product">
                 <td><img style="width: 100px; height: 100px;" src="../../images/12.png" alt=""></td>
                 <td>GIANT ESCAPE 2 CITY 2017</td>
-                <td>16.490.000đ</td>
-                <td>16.490.000đ</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
                 <td class="state">2</td>
-                <td><a href="orderAdmin.html">xem hóa đơn</a></td>
+                <td><a href="orderAdmin.html">see bill</a></td>
             </tr>
         </table>
         <div class="pagination">
@@ -207,7 +207,7 @@
 
             function move(){
                 if(ten.checked == true && tenSp.value==''){
-                    alert("Vui lòng nhập tên sản phẩm");
+                    alert("Please enter product's name!");
                 }
                 else if(ten.checked == true && tenSp.value!=''){
                     window.location.href ="thongKeTen.html";

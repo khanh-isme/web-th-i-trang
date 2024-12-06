@@ -9,7 +9,7 @@
 
 		<link rel="stylesheet" href="../../css/avt.css">
 
-		<title>Chi tiết sản phẩm</title>
+		<title>Product detail</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
 			<a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
 			
 			<ul class="nav-menu">
-				<li><a href="productAdmin.html">Sản phẩm</a></li>
-				<li><a href="orderAdmin.html">Đơn hàng</a></li>
-				<li><a href="userAdmin.html">Người dùng</a></li>
-				<li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-				<li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+				<li><a href="productAdmin.html">Products</a></li>
+            	<li><a href="orderAdmin.html">Orders</a></li>
+            	<li><a href="userAdmin.html">Users</a></li>
+           		<li><a href="thongKeAdmin.html">Product statistics</a></li>
+           		<li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
 			</ul>
 			
 			<!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -113,34 +113,35 @@
 			
 			<section id="main"> 
 				
-                <h1> Sản Phẩm</h1>
+                <h1> Product</h1>
                     <form action="#" id="formId" class="form_addProduct">
 						<div class="change_img">
 							<img src="../../images/10.png" alt="bike" id="product_pic" style="margin-bottom: 10px;">
 						</div>
 						<div class="edit">
-							<label for="product_name">Loại</label>
+							<label for="product_name">Category</label>
 							<input type="text" value="KIDS" disabled>
 						</div> 
 						<div class="edit">
-							<label for="product_name">Tên</label>
-							<input type="text" value="KIDS" disabled>
+							<label for="product_name">Name</label>
+							<input type="text" value="Super Idol Shoes" disabled>
 						</div> 
 						<div class="edit">
-							<label for="product_price">Giá</label>
-							<input type="text" value="18.999.999đ" disabled>
+							<label for="product_price">Price</label>
+							<input type="text" value="$59.99" disabled>
 						</div>
 						<div class="edit">
-							<label for="product_quantity">Số lượng</label>
+							<label for="product_quantity">Quantity</label>
 							<input type="text" value="15" disabled>
 						</div>
 						<div class="edit">
-							<label for="product_quantity">Mô tả</label>
-							<textarea name="textarea_field" disabled>DMR Rhythm Pro Dirt Jump bike 26' black còn có lối thiết kế hầm hố với sắc đen nam tính, tạo nên sự mạnh mẽ, đậm tính thể thao.</textarea>
+							<label for="product_quantity">Description</label>
+							<textarea name="textarea_field" disabled>The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.
+							</textarea>
 						</div>
 						<div class="buttons">
-							<a href="productAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
-							<a href="editProduct.html"><i class="fas fa-edit"></i>Chỉnh sửa</a>
+							<a href="productAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
+							<a href="editProduct.html"><i class="fas fa-edit"></i>Edit</a>
 						</div>
                     </form>
             </section>    
@@ -178,7 +179,7 @@
           var inputValue = inputs[i].value.trim(); // Loại bỏ khoảng trắng thừa
 
           if (!inputValue) {
-            alert("Bạn chưa điền đủ thông tin !!!");
+            alert("Please specify the boxes!");
             return;
           }
         }
@@ -186,11 +187,11 @@
         // Kiểm tra trường <textarea> trong <main>
         var textarea = document.querySelector("main textarea");
         if (textarea && !textarea.value.trim()) {
-          alert("Bạn chưa điền đủ thông tin !!!");
+          alert("Please specify the boxes!");
           return;
         }
 
-      alert("Bạn đã thêm thành công !");
+      alert("Updated successfully!");
       window.location.href = "productAdmin.html";
     }
 

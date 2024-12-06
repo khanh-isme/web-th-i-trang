@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../css/bag.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel ="stylesheet" href="../css/avt.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,15 +21,16 @@
 </head>
 <body>
 
+       
     <header>
         <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li> <a href="/html/index.html "> home</a></li>
+            <li> <a href="/html/index1.html "> home</a></li>
             <li> <a href="/html/shop.html"> shop</a></li>
                     
             <li> <a href="# "> page </a></li>
-            <li> <a href="#"> cart</a></li>
+            <li> <a href="#"> Sale</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -36,13 +38,18 @@
             
             <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-            <a href = "/html/login.html" ><i class='bx bx-user'></i></a>
-
-
             <div class="cart-icon" onclick="toggleCartPopup()">
 
                 <i class='bx bx-cart' id="cart-icon"></i>
             </div>
+
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+            
+
+           
             
             <div class= "bx bx-menu" id ="menu-icon"></div>
         </div>
@@ -74,13 +81,13 @@
             </div>
         </div>
 
-        <a href="/html/bag.html">
+        <a href="/html/bagUser.html">
             <p>see more...</p>
         </a>
 
 
         <div class="cart-total">Total: $100.10</div>
-        <a href="/html/bag.html">
+        <a href="/html/bagUser.html">
 
             <button class="checkout-btn">CHECK YOUR BAG</button>
         </a>
@@ -99,7 +106,6 @@
             <label for="productName">Product Name</label>
             <input type="text" id="productName" name="productName" placeholder="Enter product name...">
           </div>
-          
           
         <!-- Category Selection -->
         <div class="form-group">
@@ -124,8 +130,7 @@
             <!-- Add more categories as needed -->
         </select>
         </div>
-
-
+          
           <!-- Price Range Fields -->
           <div class="form-group">
             <label>Price Range</label>
@@ -137,7 +142,7 @@
           
           <!-- Search Button -->
           <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
-          <a href="shopS1.html">
+          <a href="shop.html">
             <button type="button" class="search-button">Search</button>
           </a>
         </form>
@@ -249,7 +254,7 @@
         <h4>Total <span>$22.39</span></h4>
         <p><strong>4 interest-free payments of $5.59 with Klarna.</strong></p>
 
-        <a href="/html/login1.html">
+        <a href="/html/ship.html">
             <button class="checkout-btn">Checkout</button>
         </a>
 
@@ -276,7 +281,7 @@
     <div class="product-container-a">
         <div class="product-a">
 
-            <a href="product.html">
+            <a href="productUser.html">
             <img src="../images/11.png" alt="Nike C1TY 'Brownstone'">
             </a>
             
@@ -285,7 +290,7 @@
             <p class="price">2,929$</p>
         </div>
         <div class="product-a">
-            <a href="product.html">
+            <a href="productUser.html">
 
                 <img src="../images/12.png" alt="Nike Air Force 1 Shadow">
                 <h3>Nike Air Force 1 Shadow</h3>
@@ -295,7 +300,7 @@
         </div>
 
         <div class="product-a">
-            <a href="product.html">
+            <a href="productUser.html">
 
                 <img src="../images/7.png" alt="Nike Zoom Vomero Roam">
                 <h3>Nike Zoom Vomero Roam</h3>
@@ -305,7 +310,7 @@
         </div>
 
         <div class="product-a">
-            <a href="product.html">
+            <a href="productUser.html">
 
                 <img src="../images/10.png" alt="Nike Zoom Vomero Roam">
                 <h3>Nike Zoom Vomero Roam</h3>
@@ -315,7 +320,7 @@
         </div>
 
         <div class="product-a">
-            <a href="product.html">
+            <a href="productUser.html">
                 
                 <img src="../images/12.png" alt="Nike Zoom Vomero Roam">
                 <h3>Nike Zoom Vomero Roam</h3>
@@ -325,7 +330,7 @@
         </div>
         
         <div class="product-a">
-            <a href="product.html">
+            <a href="productUser.html">
                 
                 <img src="../images/13.png" alt="Nike Zoom Vomero Roam">
                 <h3>Nike Zoom Vomero Roam</h3>
@@ -392,6 +397,6 @@
     <script src="/java script/java.js"></script>
   </div>
 
-  
+
 </body>
 </html>

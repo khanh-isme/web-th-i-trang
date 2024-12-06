@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style_OrderAdmin.css">
-    <title>Các Đơn hàng</title>
+    <title>Orders</title>
 
 
     <link rel="stylesheet" href="../../css/avt.css">
@@ -25,11 +25,11 @@
         <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li><a href="productAdmin.html">Sản phẩm</a></li>
-            <li><a href="orderAdmin.html">Đơn hàng</a></li>
-            <li><a href="userAdmin.html">Người dùng</a></li>
-            <li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
-            <li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+            <li><a href="productAdmin.html">Products</a></li>
+            <li><a href="orderAdmin.html">Orders</a></li>
+            <li><a href="userAdmin.html">Users</a></li>
+            <li><a href="thongKeAdmin.html">Product statistics</a></li>
+            <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -110,7 +110,7 @@
    
         <section id="main">
             
-            <h1>Đơn Hàng</h1>
+            <h1>Orders</h1>
             <!--product list-->
             <div class="filter">
                 <div class="address">
@@ -126,11 +126,11 @@
                         cursor: pointer;
                         margin-bottom: 0.5rem;
                     ">
-                        <option value="" disabled selected>Chọn thành phố</option>
-                        <option value="hanoi">Hà Nội</option>
-                        <option value="hochiminh">TP. Hồ Chí Minh</option>
-                        <option value="danang">Đà Nẵng</option>
-                        <option value="other">Khác</option>
+                        <option value="" disabled selected>Choose a city</option>
+                        <option value="hanoi">Ha Noi</option>
+                        <option value="hochiminh">Ho Chi Minh City</option>
+                        <option value="danang">Da Nang</option>
+                        <option value="other">Other</option>
                     </select>
                 
                     <!-- Lựa chọn quận/huyện -->
@@ -145,11 +145,11 @@
                         cursor: pointer;
                         margin-bottom: 0.5rem;
                     ">
-                        <option value="" disabled selected>Chọn quận/huyện</option>
-                        <option value="ba-dinh">Ba Đình</option>
-                        <option value="dong-da">Đống Đa</option>
-                        <option value="hai-ba-trung">Hai Bà Trưng</option>
-                        <option value="other">Khác</option>
+                        <option value="" disabled selected>Choose district</option>
+                        <option value="ba-dinh">District 1</option>
+                        <option value="dong-da">District 5</option>
+                        <option value="hai-ba-trung">Binh Thanh District</option>
+                        <option value="other">Other</option>
                     </select>
                 
                     <!-- Lựa chọn phường/xã -->
@@ -164,15 +164,15 @@
                         cursor: pointer;
                         margin-bottom: 0.5rem;
                     ">
-                        <option value="" disabled selected>Chọn phường/xã</option>
-                        <option value="phuong-1">Phường 1</option>
-                        <option value="phuong-2">Phường 2</option>
-                        <option value="phuong-3">Phường 3</option>
-                        <option value="other">Khác</option>
+                        <option value="" disabled selected>Choose ward,commune</option>
+                        <option value="phuong-1">Ward 1</option>
+                        <option value="phuong-2">Ward 2</option>
+                        <option value="phuong-3">Ward 3</option>
+                        <option value="other">Other</option>
                     </select>
                 
                     <!-- Nhập địa chỉ cụ thể -->
-                    <input type="text" id="specific-address" name="specific-address" placeholder="Nhập địa chỉ nhà" style="
+                    <input type="text" id="specific-address" name="specific-address" placeholder="Enter address" style="
                         width: calc(100% - 1rem);
                         padding: 0.5rem;
                         border: 1px solid #ccc;
@@ -185,43 +185,43 @@
                 </div>
                 
             <div class="date">
-                <label for="start">Từ ngày: </label>
+                <label for="start">From: </label>
                     <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
-                    <label for="start">đến </label>
+                    <label for="start">to </label>
                     <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
-                    <a href="orderAdmin.html" class="show"></i>Lọc</a>
+                    <a href="orderAdmin.html" class="show"></i>Filter</a>
             </div>
         </div>
         <table>
             <!--noi dung tieu de-->
             <tr class="title">
-                <th>Mã đơn hàng</th>
-                <th>Khách hàng</th>
-                <th>Địa chỉ</th>
-                <th>Thành tiền</th>
-                <th>Trạng thái</th>
+                <th>Order's code</th>
+                <th>Customer</th>
+                <th>Address</th>
+                <th>Total</th>
+                <th>Status</th>
             </tr>
             <!--noi dung cac san pham-->
             <tr class="product">
                 <td><a href="orderDetail.html">#1</a></td>
-                <td>Trọng Hiếu</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã Hủy</td>
+                <td>Tran Thanh Tung</td>
+                <td>262 Ly Hieu Nghia, P6, Q6, TpHCM</td>
+                <td>$69.99</td>
+                <td class="state">Cancelled</td>
             </tr>
             <tr class="product">
                 <td><a href="orderDetail.html">#2</a></td>
-                <td>Nguyễn Ân</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã xác nhận</td>
+                <td>Cap Dot Cot</td>
+                <td>999 Bung Ong Thoan, P Tang Nhon Phu B, tpThuDuc</td>
+                <td>$242</td>
+                <td class="state">Confirmed</td>
             </tr>
             <tr class="product">
                 <td><a href="orderDetail.html">#3</a></td>
-                <td>Mr.Thanh</td>
-                <td>123 Nguyễn Thị Minh Khai, Quận 1, TpHCM</td>
-                <td>16.490.000đ</td>
-                <td class="state">Đã giao thành công</td>
+                <td>Ly Tieu Long</td>
+                <td>32A Duong so 6, Thanh Pho Thu Duc</td>
+                <td>$33</td>
+                <td class="state">Shipped</td>
             </tr>
         </table>
         <div class="pagination">

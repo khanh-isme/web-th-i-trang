@@ -6,6 +6,7 @@
     <title>Adidas Clone</title>
     <link rel="stylesheet" href="../css/main.css"> 
     <link rel="stylesheet" href="../css/bag.css">
+    <link rel ="stylesheet" href="../css/avt.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +21,11 @@
         <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li> <a href="# "> home</a></li>
+            <li> <a href="/html/index1.html "> home</a></li>
             <li> <a href="/html/shop.html"> shop</a></li>
                     
             <li> <a href="# "> page </a></li>
-            <li> <a href=""> Sale</a></li>
+            <li> <a href="#"> Sale</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -32,13 +33,18 @@
             
             <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-            <a href = "/html/login.html" ><i class='bx bx-user'></i></a>
-
-
             <div class="cart-icon" onclick="toggleCartPopup()">
 
                 <i class='bx bx-cart' id="cart-icon"></i>
             </div>
+
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+            
+
+           
             
             <div class= "bx bx-menu" id ="menu-icon"></div>
         </div>
@@ -70,13 +76,13 @@
             </div>
         </div>
 
-        <a href="/html/ship.html">
+        <a href="/html/bagUser.html">
             <p>see more...</p>
         </a>
 
 
         <div class="cart-total">Total: $100.10</div>
-        <a href="/html/bag.html">
+        <a href="/html/bagUser.html">
 
             <button class="checkout-btn">CHECK YOUR BAG</button>
         </a>
@@ -96,29 +102,29 @@
             <input type="text" id="productName" name="productName" placeholder="Enter product name...">
           </div>
           
-          <!-- Category Selection -->
-          <div class="form-group">
-            <label for="category">Category</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="shoes">Sport</option>
-              <option value="nike-air">nike-air</option>
-              <option value="fastion">fastion</option>
-              <option value="accessories">giay siu dep</option>
-              <!-- Add more categories as needed -->
-            </select>
-          </div>
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
 
-          <div class="form-group">
-            <label for="category">For your</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="shoes">men</option>
-              <option value="nike-air">woman</option>
-              <option value="fastion">kid</option>
-              <!-- Add more categories as needed -->
-            </select>
-          </div>
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
           
           <!-- Price Range Fields -->
           <div class="form-group">
@@ -131,7 +137,7 @@
           
           <!-- Search Button -->
           <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
-          <a href="shopS1.html">
+          <a href="shopS1User.html">
             <button type="button" class="search-button">Search</button>
           </a>
         </form>
@@ -141,7 +147,7 @@
       <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
     </div>
 
-   
+
 
 
 
@@ -182,7 +188,7 @@
                         <button disabled>EU 41</button>
                     </div>
                 </div>
-                <a  href="bag.html">
+                <a  href="bagUser.html">
 
                     <button class="add-to-bag">Add to Bag</button>
                 </a>
@@ -198,7 +204,7 @@
         <div class="product-container-a">
             <div class="product-a">
 
-                <a href="product.html">
+                <a href="productUser.html">
                 <img src="../images/11.png" alt="Nike C1TY 'Brownstone'">
                 </a>
                 
@@ -207,7 +213,7 @@
                 <p class="price">99$</p>
             </div>
             <div class="product-a">
-                <a href="product.html">
+                <a href="productUser.html">
 
                     <img src="../images/14.png" alt="Nike Air Force 1 Shadow">
                     <h3>Nike Air Force 1 Shadow</h3>
@@ -216,7 +222,7 @@
                 </a>
             </div>
             <div class="product-a">
-                <a href="product.html">
+                <a href="productUser.html">
                 
                     <img src="../images/8.jpg" alt="Nike Zoom Vomero Roam">
                     <h3>Nike Zoom Vomero Roam</h3>
@@ -225,7 +231,7 @@
                 </a>
             </div>
             <div class="product-a">
-                <a href="product.html">
+                <a href="productUser.html">
                 
                     <img src="../images/7.png" alt="Nike Zoom Vomero Roam">
                     <h3>Nike Zoom Vomero Roam</h3>
@@ -234,7 +240,7 @@
                 </a>
             </div>
             <div class="product-a">
-                <a href="product.html">
+                <a href="productUser.html">
                 
                     <img src="../images/12.png" alt="Nike Zoom Vomero Roam">
                     <h3>Nike Zoom Vomero Roam</h3>
@@ -243,7 +249,7 @@
                 </a>
             </div>
             <div class="product-a">
-                <a href="product.html">
+                <a href="productUser.html">
                 
                     <img src="../images/13.png" alt="Nike Zoom Vomero Roam">
                     <h3>Nike Zoom Vomero Roam</h3>

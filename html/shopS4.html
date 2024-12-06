@@ -20,14 +20,14 @@
 </head>
 <body>    
     <header>
-        <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
+        <a href="../index.html" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
             <li> <a href="# "> home</a></li>
             <li> <a href="../html/shop.html"> shop</a></li>
                     
             <li> <a href="# "> page </a></li>
-            <li> <a href=""> Sale</a></li>
+            <li> <a href="#"> cart</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -35,7 +35,7 @@
             
             <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-            <a href = "/html/login.html" ><i class='bx bx-user'></i></a>
+            <a href = "../html/login.html" ><i class='bx bx-user'></i></a>
 
 
             <div class="cart-icon" onclick="toggleCartPopup()">
@@ -73,15 +73,10 @@
             </div>
         </div>
 
-        <a href="/html/bag.html">
-            <p>see more...</p>
-        </a>
-
-
         <div class="cart-total">Total: $100.10</div>
-        <a href="/html/bag.html">
+        <a href="../html/ship.html">
 
-            <button class="checkout-btn">CHECK YOUR BAG</button>
+            <button class="checkout-btn">CHECKOUT</button>
         </a>
     </div>
 
@@ -99,29 +94,29 @@
             <input type="text" id="productName" name="productName" placeholder="Enter product name...">
           </div>
           
-        <!-- Category Selection -->
-        <div class="form-group">
-        <label for="category">Category</label>
-        <select id="category" name="category">
-            <option value="">Select category</option>
-            <option value="shoes">Sport</option>
-            <option value="nike-air">nike-air</option>
-            <option value="fastion">fastion</option>
-            <option value="accessories">giay siu dep</option>
-            <!-- Add more categories as needed -->
-        </select>
-        </div>
+           <!-- Category Selection -->
+           <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="">Select category</option>
+              <option value="shoes">Sport</option>
+              <option value="nike-air">nike-air</option>
+              <option value="fastion">fastion</option>
+              <option value="accessories">giay siu dep</option>
+              <!-- Add more categories as needed -->
+            </select>
+          </div>
 
-        <div class="form-group">
-        <label for="category">For your</label>
-        <select id="category" name="category">
-            <option value="">Select category</option>
-            <option value="shoes">men</option>
-            <option value="nike-air">woman</option>
-            <option value="fastion">kid</option>
-            <!-- Add more categories as needed -->
-        </select>
-        </div>
+          <div class="form-group">
+            <label for="category">For your</label>
+            <select id="category" name="category">
+              <option value="">Select category</option>
+              <option value="shoes">men</option>
+              <option value="nike-air">woman</option>
+              <option value="fastion">kid</option>
+              <!-- Add more categories as needed -->
+            </select>
+          </div>
           
           <!-- Price Range Fields -->
           <div class="form-group">
@@ -133,16 +128,14 @@
           </div>
           
           <!-- Search Button -->
-          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
-          <a href="shopS1.html">
-            <button type="button" class="search-button">Search</button>
-          </a>
+           <a href="../html/shop1.html">
+               <button type="button" class="search-button" onclick="performSearch()">Search</button>
+           </a>
         </form>
       </div>
       
       <!-- Result Display Section -->
       <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
-    </div>
 
 
 
@@ -162,36 +155,36 @@
                 
                 <div class="filter-header"  onclick="toggleSize()">Gender </div>
                 <div class="filter-options" id="gender-options">
-                    <a href="shopF.html"> Men </a>
+                    <a href=""> Men </a>
 
-                    <a href="shopF.html"> Women </a>
+                    <a href=""> Women </a>
                     
-                    <a href="shopF.html">Unisex</a>
+                    <a href="">Unisex</a>
                 </div>
 
                 <div class="filter-header-color"  onclick="toggleSize1()">Color </div>
                 <div class="filter-options" id="color-options">
-                    <a href="shopF.html"> blue </a>
+                    <a href=""> Men </a>
 
-                    <a href="shopF.html"> red </a>
+                    <a href=""> Women </a>
                     
-                    <a href="shopF.html">gray</a>
+                    <a href="">Unisex</a>
                 </div>
 
                 <div class="filter-header-collection"  onclick="toggleSize2()">Collection </div>
                 <div class="filter-options" id="collection-options">
-                    <a href="shopF.html"> winter </a>
+                    <a href=""> Men </a>
 
-                    <a href="shopF.html"> summer </a>
+                    <a href=""> Women </a>
                     
-                    <a href="shopF.html"> spring</a>
+                    <a href="">Unisex</a>
                 </div>
                 
             </aside>
     
             <main class="product-list">
                 <div class="header">
-                    <h1> Shoes vipro </h1>
+                    <h1> Product Found </h1>
                 </div>
     
                 <div class="products">
@@ -272,7 +265,7 @@
                             <h3>Giày Gengu</h3>
                             <p>Mang vào thì thua T1</p>
                             <p>1 Mẫu màu</p>
-                            <p class="price">1$</p>
+                            <p class="price">1,0$</p>
                         </a>
                     </div>
                     <div class="product">
@@ -286,21 +279,18 @@
                             <p class="price">999$</p>
                         </a>
                     </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/222.webp" alt="Shoe 8">
-                            <p class="tag">Bán đắt</p>
-                            <h3>Giày SGP oai phong</h3>
-                            <p>Mang vào sẽ có 9 lần vô địch quốc nội</p>
-                            <p>2 Mẫu màu</p>
-                            <p class="price">999$</p>
-                        </a>
-                    </div>
-
                 </div>
             </main>
         </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -315,13 +305,13 @@
                     <i class='bx bx-chevron-left'></i>
                 </a>
             </li>
-            <li class="pagination-item shop-product-pagination-item">
-                <a href="../html/shop.html">
+            <li class="pagination-item ">
+                <a href="../html/shopS1.html">
                     1
                 </a>
             </li>
             <li class="pagination-item  ">
-                <a href="../html/shop2.html">
+                <a href="../html/shopS2.html">
                     2
                 </a>
             </li>
@@ -329,8 +319,8 @@
                 <a href="">
                     ...
                 </a>
-            </li> <li class="pagination-item">
-                <a href="../html/shop4.html">
+            </li> <li class="pagination-item  shop-product-pagination-item">
+                <a href="../html/shopS4.html">
                     4
                 </a>
             </li>

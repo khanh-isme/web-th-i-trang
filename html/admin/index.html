@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../../css/style_Admin.css"> <!-- css style - co the sua lai -->
-		<title>Welcome to Admin Page</title>
-	</head>
-    <body>
-        <div class="welcome">
-            <ul>
-                <li style="font-size: 35px"> Xin chào, <span class="design_admin">admin</span></li>
-                <li style="font-size: 42px">Chào mừng quay trở lại <span class="design_adminName">Mr. Thanh</span></li>
-                <li style="font-size: 25px">đây là trang admin</li>
-                <a href="loginAdmin.html"><button>Đăng nhập</button></a>
-            </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--đổi title khi nhấn registerLink-->
+    <title class="title">Login</title>
+    <link rel="stylesheet" href="../../css/style_LoginAdmin.css">
+</head>
+<body>
+    <img src="../../images/Adidas-Logo.png" alt="thegioididong">
+    <div class="wrapper">
+        <div class=" form-box login">
+            <h1>Administrator login</h1>
+            <form action="productAdmin.html">
+                <input type="text" placeholder="Username" required> 
+                <input type="password" placeholder="Password" required>
+                <button>LOGIN</button>
+            </form>
         </div>
-    </body>
+    </div>
+    <script>
+        const wrapper=document.querySelector('.wrapper');
+        const loginLink=document.querySelector('.login-link');
+        const registerLink=document.querySelector('.register-link');
+        const title=document.querySelector('.title');
+
+        registerLink.addEventListener('click',()=>{
+            wrapper.classList.add('active');
+        });
+
+        loginLink.addEventListener('click',()=>{
+            wrapper.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

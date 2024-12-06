@@ -23,11 +23,18 @@
 			<a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
 			
 			<ul class="nav-menu">
+				<!--
 				<li><a href="productAdmin.html">Sản phẩm</a></li>
 				<li><a href="orderAdmin.html">Đơn hàng</a></li>
 				<li><a href="userAdmin.html">Người dùng</a></li>
 				<li><a href="thongKeAdmin.html">Thống Kê Sản Phẩm</a></li>
 				<li><a href="thongKeKHAdmin.html">Thống Kê Khách Hàng</a></li>
+			-->
+			<li><a href="productAdmin.html">Products</a></li>
+			<li><a href="orderAdmin.html">Orders</a></li>
+			<li><a href="userAdmin.html">Users</a></li>
+			<li><a href="thongKeAdmin.html">Product statistics</a></li>
+			<li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
 			</ul>
 			
 			<!--thẻ <i> là thẻ chứ biểu tượng -->
@@ -109,43 +116,43 @@
 			
 			<section id="main"> 
 				
-                <h1>Sửa Thông Tin Sản Phẩm</h1>
+                <h1>Edit product's information</h1>
                     <form action="#" class="form_addProduct">
 						<div class="change_img">
 							<img src="../../images/10.png" alt="bike" id="product_pic">
 							<div class="change_action">
-							<label for="input_file" class="change_button">Thay đổi</label>
+							<label for="input_file" class="change_button">Change</label>
 							<input type="file" id="input_file" accept="image/*"> 
-							<label class="change_button" onclick="del()">Xóa</label>
+							<label class="change_button" onclick="del()">Delete</label>
 							</div>
 						</div>
 						<div class="edit"> <!--phan loai-->
-							<label for="product_brand">Loại</label>
+							<label for="product_brand">Category</label>
 							<select name="product_brand" id="product_name">
 								<option value="kids">KIDS</option>
 								<option value="moutain">MOUTAIN</option>
 							</select>
 						</div>
 						<div class="edit">
-							<label for="product_name">Tên</label>
+							<label for="product_name">Name</label>
 							<input type="text" name="product_name" value="MOUTAIN BIKE">
 						</div>
 						<div class="edit">
-							<label for="product_price">Giá</label>
-							<input type="text" name="product_price" value="18.999.999đ">
+							<label for="product_price">Price</label>
+							<input type="text" name="product_price" value="$29.99">
 						</div>
 						<div class="edit">
-							<label for="product_quantity">Số lượng</label>
+							<label for="product_quantity">Quantity</label>
 							<input type="number" name="product_quantity" value="15">
 						</div>
 						<div class="edit">
-							<label for="product_quantity">Mô tả</label>
-							<textarea name="textarea_field">Xe đạp Cannondale nổi bật với thiết kế tinh tế và hiện đại. Mỗi chiếc xe đều được chăm chút tỉ mỉ, từ khung xe đến các chi tiết nhỏ, mang đến không chỉ vẻ đẹp mà còn độ bền bỉ vượt trội. Với những công nghệ tiên tiến nhất trong ngành công nghiệp xe đạp, Cannondale luôn dẫn đầu xu hướng. Khung xe nhẹ, chắc chắn và các bộ phận được tối ưu hóa giúp bạn dễ dàng chinh phục mọi địa hình. Cannondale mang đến cho người dùng một trải nghiệm lái êm ái và mượt mà, với hệ thống giảm xóc hoàn hảo giúp bạn vượt qua những đoạn đường gồ ghề mà không cảm thấy khó chịu. Sản phẩm của Cannondale không chỉ đẹp mà còn bền bỉ, với chất liệu cao cấp và quy trình sản xuất nghiêm ngặt, mỗi chiếc xe đều được thiết kế để chịu đựng thử thách của thời gian.</textarea>
+							<label for="product_quantity">Description</label>
+							<textarea name="textarea_field">LeBron isn't slowing down any time soon. The open-court nightmare is as fast and spry as ever. But even Bron needs support when he's at full throttle. That's why we levelled up the LeBron 22. Newly implemented saddle wings offer optimal midfoot stability. They complement the heel and forefoot Air Zoom units, so the King can keep pushing the sport forwards. This version is inspired by LeBron's relationship with his youngest son and the sense of clarity it brings. With its extra-durable rubber outsole, this version gives you traction for outdoor courts.</textarea>
 						</div>
 						<div>
 						<div class="buttons">
-							<a href="productAdmin.html"><i class="fa-solid fa-x"></i>Đóng</a>
-							<a onclick="warning()"><i class="fa-solid fa-download"></i>Cập nhật</a>
+							<a href="productAdmin.html"><i class="fa-solid fa-x"></i>Close</a>
+							<a onclick="warning()"><i class="fa-solid fa-download"></i>Submit update</a>
 						</div>
                     </form>
             </section>    
@@ -184,7 +191,7 @@
     var inputValue = inputs[i].value.trim(); // Loại bỏ khoảng trắng thừa
 
     if (!inputValue) {
-      alert("Bạn chưa điền đủ thông tin !!!");
+      alert("Please specify the boxes!");
       return;
     }
   }
@@ -192,11 +199,11 @@
   // Kiểm tra trường <textarea> trong <main>
   var textarea = document.querySelector("main textarea");
   if (textarea && !textarea.value.trim()) {
-    alert("Bạn chưa điền đủ thông tin !!!");
+    alert("Please specify the boxes!");
     return;
   }
 
-  alert("Bạn đã thêm thành công !");
+  alert("Updated successfully!");
   window.location.href = "productAdmin.html";
 }
 
@@ -216,7 +223,7 @@
 
 			function del(){
 				var pic = document.getElementById("product_pic");
-				var result = confirm("Bạn có chắc muốn xóa hình không ?");
+				var result = confirm("Delete image?");
 				if (result)
 					pic.style.display = "none";
 			}

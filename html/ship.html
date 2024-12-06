@@ -8,7 +8,8 @@
     <link rel="icon" href="images/Adidas-Logo.png"
     type="text/x-icon">
     
-    <link rel ="stylesheet" href="/css/ship.css">
+    <link rel ="stylesheet" href="../css/ship.css">
+    <link rel ="stylesheet" href="../css/avt.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,27 +26,30 @@
         <a href="#" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li> <a href="index.html"> home</a></li>
-            <li> <a href="shop.html"> shop</a></li>
-            <li> <a href="# ">product </a></li>
+            <li> <a href="/html/index1.html "> home</a></li>
+            <li> <a href="/html/shopUser.html"> shop</a></li>
+                    
             <li> <a href="# "> page </a></li>
-            <li> <a href="cart.html"> cart</a></li>
+            <li> <a href=""> Sale</a></li>
         </ul>
         
         <!--thẻ <i> là thẻ chứ biểu tượng -->
         <div class="nav-icon">
-            <div class="search-bar">
-                <div class="icon"><i class='bx bx-search' ></i></div>
-                <input type="text" placeholder="Search">
-            </div>
-
-            <a href = "login.html" ><i class='bx bx-user'></i></a>
-
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
             <div class="cart-icon" onclick="toggleCartPopup()">
 
                 <i class='bx bx-cart' id="cart-icon"></i>
             </div>
+
+            <a href="/html/user.html" class="chat-bubble">
+                <img src="/images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+            
+
+           
             
             <div class= "bx bx-menu" id ="menu-icon"></div>
         </div>
@@ -56,7 +60,7 @@
     <!-- Cart Popup -->
     <div class="cart-popup" id="cartPopup">
         <div class="cart-item">
-            <img src="images/13.png" alt="Product Image">
+            <img src="../images/13.png" alt="Product Image">
             <div class="cart-item-details">
                 <div class="cart-item-name">T-Shirt 14A</div>
                 <div class="cart-item-price">$50.05 x1</div>
@@ -77,12 +81,77 @@
             </div>
         </div>
 
-        <div class="cart-total">Total: $100.10</div>
-        <a href="ship.html">
+        <a href="/html/ship.html">
+            <p>see more...</p>
+        </a>
 
-            <button class="checkout-btn">CHECKOUT</button>
+
+        <div class="cart-total">Total: $100.10</div>
+        <a href="/html/bag.html">
+
+            <button class="checkout-btn">CHECK YOUR BAG</button>
         </a>
     </div>
+
+
+
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+          <a href="shop.html">
+            <button type="button" class="search-button">Search</button>
+          </a>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+
 
 
     <div class="container">
@@ -95,15 +164,15 @@
             <h2>Enter your name and address:</h2>
             <div class="input-group">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="firstName" placeholder="First Name"value="zan">
             </div>
             <div class="input-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="text" id="lastName" placeholder="Last Name" value="khanh">
             </div>
             <div class="input-group">
                 <label for="address">Address</label>
-                <input type="text" id="address" placeholder="Start typing a street address or postcode">
+                <input type="text" id="address" placeholder="Start typing a street address or postcode" value="hoa quả sơn số 666">
             </div>
             <div class="input-group">
                 <a href="#">Enter address manually</a>
@@ -112,11 +181,11 @@
             <h2>What's your contact information?</h2>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email">
+                <input type="email" id="email" placeholder="Email" value="ngokhong@gmail.com">
             </div>
             <div class="input-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Phone Number">
+                <input type="tel" id="phone" placeholder="Phone Number" value="66666666">
             </div>
 
             <h2>Billing</h2>
@@ -165,9 +234,9 @@
         <div class="summary-section">
             <h2>Order Summary</h2>
             <div class="order-summary">
-                <p>Subtotal: <span>5,279,000₫</span></p>
+                <p>Subtotal: <span>80$</span></p>
                 <p>Delivery/Shipping: <span>Free</span></p>
-                <p class="order-total">Total: <span>5,279,000₫</span></p>
+                <p class="order-total">Total: <span>80$</span></p>
                 
                 <p>Arrives Wed, Nov 13 - Tue, Nov 19</p>
                 <div class="product-history">
@@ -178,6 +247,7 @@
 
                             <p>Qty: 1</p>
                             <p>Size: EU 43</p>
+                            <p>Price: 40$</p>
                         </div>
                     </div>
 
@@ -194,6 +264,7 @@
 
                             <p>Qty: 1</p>
                             <p>Size: EU 43</p>
+                            <p>Price: 40$</p>
                         </div>
                     </div>
 
@@ -204,6 +275,6 @@
         </div>
     </div>
 
-    <script src="java.js"></script>
+    <script src="../java script/java.js"></script>
 </body>
 </html>
