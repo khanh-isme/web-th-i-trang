@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style_ProductAdmin.css">
+    <link rel="stylesheet" href="../../css/avt.css">
+
+    <title>Product</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+
+    <header>
+        <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li><a href="productAdmin.html">Products</a></li>
+            <li><a href="orderAdmin.html">Orders</a></li>
+            <li><a href="userAdmin.html">Users</a></li>
+            <li><a href="thongKeAdmin.html">Product statistics</a></li>
+            <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+
+           
+            <a href="userDetail.html" class="chat-bubble">
+                <img src="../../images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+                
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+
+    </header>
+
+
+    <!-- Cart Popup -->
+   
+
+
+
+    <!--tìm kiếm nâng cao-->    
+    <div class="search-container" id="searchPopup">
+        <h2>Advanced Product Search</h2>
+        
+        <!-- Search Form -->
+        <form id="searchForm">
+          <!-- Product Name Field -->
+          <div class="form-group">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+          </div>
+          
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            <option value="nike-air">nike-air</option>
+            <option value="fastion">fastion</option>
+            <option value="accessories">giay siu dep</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="category">For your</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">men</option>
+            <option value="nike-air">woman</option>
+            <option value="fastion">kid</option>
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+          <!-- Price Range Fields -->
+          <div class="form-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+              <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+            </div>
+          </div>
+          
+          <!-- Search Button -->
+          <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+          <a href="productAdminSearch.html">
+            <button type="button" class="search-button">Search</button>
+          </a>
+        </form>
+      </div>
+      
+      <!-- Result Display Section -->
+      <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+    </div>
+    
+
+
+
+<main>
+   
+
+
+
+    <section id="main">
+       
+        <!--create button-->
+        <h1>Product Found</h1>
+        <a href="addProduct.html" class="create-button"><i class="fas fa-plus"></i> Add</a>
+        <!--product list-->
+        <table>
+            <!--noi dung tieu de-->
+            <tr class="title">
+                <th>Code</th>
+                <th>Image</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Inventory quantity</th>
+                <th>Operations</th>
+            </tr>
+            <!--noi dung cac san pham-->
+            <tr class="product">
+                <td>#1</td>
+                <td><a href="productDetail.html"><img src="../../images/11.png" alt="bike1"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$49.99</td>
+                <td>15</td>
+                <td>
+                    <a href="editProduct.html" class="action-button">
+                        <i class="fas fa-edit"></i>
+                        <div class="action-tooltip">Edit</div>
+                    </a>
+                    <a class="action-button" onclick="warning(this)">
+                        <i class="fas fa-trash-alt"></i>
+                        <div class="action-tooltip">Delete</div>
+                    </a>
+                </td>
+            </tr>
+            <tr class="product">
+                <td>#2</td>
+                <td><a href="productDetail.html"><img src="../../images/12.png" alt="bike3"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$48.99</td>
+                <td>15</td>
+                <td>
+                    <a href="editProduct.html" class="action-button">
+                        <i class="fas fa-edit"></i>
+                        <div class="action-tooltip">Edit</div>
+                    </a>
+                    <a class="action-button" onclick="warning(this)">
+                        <i class="fas fa-trash-alt"></i>
+                        <div class="action-tooltip">Delete</div>
+                    </a>
+                </td>
+            </tr>
+            <tr class="product">
+                <td>#3</td>
+                <td><a href="productDetail.html"><img src="../../images/13.png" alt="bike2"></a></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$59.99</td>
+                <td>15</td>
+                <td>
+                    <a href="editProduct.html" class="action-button">
+                        <i class="fas fa-edit"></i>
+                        <div class="action-tooltip">Edit</div>
+                    </a>
+                    <a class="action-button" onclick="warning(this)">
+                        <i class="fas fa-trash-alt"></i>
+                        <div class="action-tooltip">Delete</div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <div class="pagination">
+            <a href="productAdmin.html">&lt;</a>
+            <a href="productAdmin.html" class="active">1</a>
+            <a href="productAdmin2.html">2</a>
+            <a href="productAdmin2.html">&gt;</a>
+        </div>
+    </section>
+    <script>
+        // js cua phan aside menu
+			function w3_open() {
+  				document.getElementById("main").style.marginLeft = "15%";
+  				document.getElementById("mySidebar").style.width = "15%";
+  				document.getElementById("mySidebar").style.display = "block";
+  				document.getElementById("openNav").style.display = 'none';
+				}
+			function w3_close() {
+  				document.getElementById("main").style.marginLeft = "0%";
+  				document.getElementById("mySidebar").style.display = "none";
+  				document.getElementById("openNav").style.display = "inline-block";
+			}
+        //js xoa 
+        function warning(e){
+            var result = confirm("Delete product?")
+            if(result)
+                e.closest("tr").remove();
+        }
+    </script>
+
+<script src="../../java script/java.js"></script>
+</main>
+</body>
+</html>

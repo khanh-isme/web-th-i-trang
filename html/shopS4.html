@@ -23,8 +23,8 @@
         <a href="../index.html" class ="logo"> <img src="../images/Adidas-Logo.png" alt=""></a>
         
         <ul class="nav-menu">
-            <li> <a href="# "> home</a></li>
-            <li> <a href="../html/shop.html"> shop</a></li>
+            <li> <a href="index.html"> home</a></li>
+            <li> <a href="shop.html"> shop</a></li>
                     
             <li> <a href="# "> page </a></li>
             <li> <a href="#"> cart</a></li>
@@ -35,7 +35,7 @@
             
             <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-            <a href = "../html/login.html" ><i class='bx bx-user'></i></a>
+            <a href = "login.html" ><i class='bx bx-user'></i></a>
 
 
             <div class="cart-icon" onclick="toggleCartPopup()">
@@ -72,9 +72,12 @@
                 <i class='bx bxs-trash-alt' ></i>
             </div>
         </div>
+        <a href="bag.html">
+            <p>see more...</p>
+        </a>
 
         <div class="cart-total">Total: $100.10</div>
-        <a href="../html/ship.html">
+        <a href="bag.html">
 
             <button class="checkout-btn">CHECKOUT</button>
         </a>
@@ -142,149 +145,145 @@
 
 
 
-    
-        <div class="container">
-            <aside class="sidebar">
-                <h2>Filters</h2>
-                <div class="filter-group">
-                </div>
-                <div class="filter-group">
-                    <label><input type="checkbox"> Boys</label><br>
-                    <label><input type="checkbox"> Girls</label>
-                </div>
+      <div class="container">
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <div class="filter-group">
+            </div>
+            <div class="filter-group">
+                <label><input type="checkbox"> Boys</label><br>
+                <label><input type="checkbox"> Girls</label>
+            </div>
+            
+            <div class="filter-header"  onclick="toggleSize()">Gender </div>
+            <div class="filter-options" id="gender-options">
+                <a href="shopF.html"> Men </a>
+
+                <a href="shopF.html"> Women </a>
                 
-                <div class="filter-header"  onclick="toggleSize()">Gender </div>
-                <div class="filter-options" id="gender-options">
-                    <a href=""> Men </a>
+                <a href="shopF.html">Unisex</a>
+            </div>
 
-                    <a href=""> Women </a>
-                    
-                    <a href="">Unisex</a>
-                </div>
+            <div class="filter-header-color"  onclick="toggleSize1()">Color </div>
+            <div class="filter-options" id="color-options">
+                <a href="shopF.html"> red </a>
 
-                <div class="filter-header-color"  onclick="toggleSize1()">Color </div>
-                <div class="filter-options" id="color-options">
-                    <a href=""> Men </a>
-
-                    <a href=""> Women </a>
-                    
-                    <a href="">Unisex</a>
-                </div>
-
-                <div class="filter-header-collection"  onclick="toggleSize2()">Collection </div>
-                <div class="filter-options" id="collection-options">
-                    <a href=""> Men </a>
-
-                    <a href=""> Women </a>
-                    
-                    <a href="">Unisex</a>
-                </div>
+                <a href="shopF.html"> blue </a>
                 
-            </aside>
-    
-            <main class="product-list">
-                <div class="header">
-                    <h1> Product Found </h1>
+                <a href="shopF.html"> Gray</a>
+            </div>
+
+            <div class="filter-header-collection"  onclick="toggleSize2()">Collection </div>
+            <div class="filter-options" id="collection-options">
+                <a href="shopF.html"> summer</a>
+
+                <a href="shopF.html"> wintter </a>
+                
+                <a href="shopF.html">spring</a>
+            </div>
+            
+        </aside>
+
+        <main class="product-list">
+            <div class="header">
+                <h1> Product Found </h1>
+            </div>
+
+            <div class="products">
+                <div class="product">
+                    <a href="product.html">
+
+                        <img src="../images/11.png" alt="Shoe 1">
+                        <p class="tag">Hàng mới</p>
+                        <h3>Nike Pegasus Trail 5</h3>
+                        <p>Giày cho mấy nhóc già đầu đi</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">1000$</p>
+                    </a>
                 </div>
-    
-                <div class="products">
-                    <div class="product">
-                        <a href="product.html">
 
-                            <img src="../images/11.png" alt="Shoe 1">
-                            <p class="tag">Hàng mới</p>
-                            <h3>Nike Pegasus Trail 5</h3>
-                            <p>Giày cho mấy nhóc già đầu đi</p>
-                            <p>1 Mẫu màu</p>
-                            <p class="price">1000$</p>
-                        </a>
-                    </div>
+                <!-- Repeat product divs for other products -->
+                <div class="product">
+                    <a href="product.html">
 
-                    <!-- Repeat product divs for other products -->
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/12.png" alt="Shoe 2">
-                            <p class="tag">Bán chạy</p>
-                            <h3>For My Pride 41</h3>
-                            <p>Giày giành cho MCK</p>
-                            <p>1 Mẫu màu</p>
-                            <p class="price">2000$</p>
-                        </a>
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/7.png" alt="Shoe 2">
-                            <p class="tag">Bán chạy</p>
-                            <h3>For My Pride 41</h3>
-                            <p>Giày giành cho MCK</p>
-                            <p>1 Mẫu màu</p>
-                            <p class="price">2,679$</p>
-                        </a>
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                        
-                            <img src="../images/10.png" alt="Shoe 4">
-                            <p class="tag">Bán chạy</p>
-                            <h3>Nike air mag hàng faki</h3>
-                            <p>Mang vào auto đẹp gái</p>
-                            <p>2 Mẫu màu</p>
-                            <p class="price">4,000,000$</p>
-                        </a>   
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/14.png" alt="Shoe 5">
-                            <p class="tag">Cháy hàng</p>
-                            <h3>Giày 30/4/1975</h3>
-                            <p>Mang vào dinh độc lập sẽ được tặng huy chương</p>
-                            <p>0 Mẫu màu</p>
-                            <p class="price">7,00$</p>
-                        </a>
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/13.png" alt="Shoe 6">
-                            <p class="tag">Bán chạy</p>
-                            <h3>Nigeria</h3>
-                            <p>Mang hiệu ứng quyền công dân</p>
-                            <p>1 Mẫu màu</p>
-                            <p class="price">999$</p>
-                        </a>
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/8.jpg" alt="Shoe 7">
-                            <p class="tag">Ế hàng</p>
-                            <h3>Giày Gengu</h3>
-                            <p>Mang vào thì thua T1</p>
-                            <p>1 Mẫu màu</p>
-                            <p class="price">1,0$</p>
-                        </a>
-                    </div>
-                    <div class="product">
-                        <a href="product.html">
-
-                            <img src="../images/11.png" alt="Shoe 8">
-                            <p class="tag">Bán đắt</p>
-                            <h3>Giày SGP oai phong</h3>
-                            <p>Mang vào sẽ có 9 lần vô địch quốc nội</p>
-                            <p>2 Mẫu màu</p>
-                            <p class="price">999$</p>
-                        </a>
-                    </div>
+                        <img src="../images/12.png" alt="Shoe 2">
+                        <p class="tag">Bán chạy</p>
+                        <h3>For My Pride 41</h3>
+                        <p>Giày giành cho MCK</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">2000$</p>
+                    </a>
                 </div>
-            </main>
-        </div>
+                <div class="product">
+                    <a href="product.html">
 
+                        <img src="../images/7.png" alt="Shoe 2">
+                        <p class="tag">Bán chạy</p>
+                        <h3>For My Pride 41</h3>
+                        <p>Giày giành cho MCK</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">2,679$</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html">
 
+                    
+                        <img src="../images/10.png" alt="Shoe 4">
+                        <p class="tag">Bán chạy</p>
+                        <h3>Nike air mag hàng faki</h3>
+                        <p>Mang vào auto đẹp gái</p>
+                        <p>2 Mẫu màu</p>
+                        <p class="price">4,000,000$</p>
+                    </a>   
+                </div>
+                <div class="product">
+                    <a href="product.html">
 
+                        <img src="../images/14.png" alt="Shoe 5">
+                        <p class="tag">Cháy hàng</p>
+                        <h3>Giày 30/4/1975</h3>
+                        <p>Mang vào dinh độc lập sẽ được tặng huy chương</p>
+                        <p>0 Mẫu màu</p>
+                        <p class="price">7,00$</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html">
+
+                        <img src="../images/13.png" alt="Shoe 6">
+                        <p class="tag">Bán chạy</p>
+                        <h3>Nigeria</h3>
+                        <p>Mang hiệu ứng quyền công dân</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">999$</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html">
+
+                        <img src="../images/8.jpg" alt="Shoe 7">
+                        <p class="tag">Ế hàng</p>
+                        <h3>Giày Gengu</h3>
+                        <p>Mang vào thì thua T1</p>
+                        <p>1 Mẫu màu</p>
+                        <p class="price">1,0$</p>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="product.html">
+
+                        <img src="../images/11.png" alt="Shoe 8">
+                        <p class="tag">Bán đắt</p>
+                        <h3>Giày SGP oai phong</h3>
+                        <p>Mang vào sẽ có 9 lần vô địch quốc nội</p>
+                        <p>2 Mẫu màu</p>
+                        <p class="price">999$đ</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
 
 
 
@@ -306,12 +305,12 @@
                 </a>
             </li>
             <li class="pagination-item ">
-                <a href="../html/shopS1.html">
+                <a href="shopS1.html">
                     1
                 </a>
             </li>
             <li class="pagination-item  ">
-                <a href="../html/shopS2.html">
+                <a href="shopS2.html">
                     2
                 </a>
             </li>
@@ -320,7 +319,7 @@
                     ...
                 </a>
             </li> <li class="pagination-item  shop-product-pagination-item">
-                <a href="../html/shopS4.html">
+                <a href="shopS4.html">
                     4
                 </a>
             </li>
@@ -339,55 +338,8 @@
 
 
 
-         <!--footer-->
-         <section class="footer">
-            <div class="footer-box">
-                <h2><a href="#" class="logo"><i class='bx bxs-t-shirt'></i> Adidas</a></h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, voluptate laboriosam a explicabo quis qui voluptatum blanditiis labore non? A, consequatur atque ea vero molestias eum corporis minima sunt tempore.</p>
-           
-                <div class="social">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                </div>
-           
-            </div>
-            <div class="footer-box">
-                <h3>Support</h3>
-                <li> <a href="#">Product</a></li>
-                <li> <a href="#">Help & Product</a></li>
-                <li> <a href="#">Return of Policy</a></li>
-                <li> <a href="#">Terms of Use</a></li>
-                <li> <a href="#">FAQ</a></li>
-                
-        
-            </div> 
-            <div class="footer-box">
-                <h3>Our Branches</h3>
-                <li> <a href="#">India</a></li>
-                <li> <a href="#">Japan</a></li>
-                <li> <a href="#">United States</a></li>
-                <li> <a href="#">Canada</a></li>
-                <li> <a href="#">Nepal</a></li>
-                
-        
-            </div> 
-        
-            <div class="footer-box">
-                <h3>Payment Method</h3>
-                <div class="payment">
-                    <img src="../images/visa.png">
-                    <img src="../images/Mastercard_2019_logo.svg.png">
-                    <img src="../images/paypal.png">
-                    <img src="../images/American-Express-Color.png">
-                </div>
-                
-        
-            </div> 
-        </section>
+       
 
-        <script src="/java script/java.js "></script>
+        <script src="../java script/java.js "></script>
 </body>
 </html>
