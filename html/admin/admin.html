@@ -1,289 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adidas Clone</title>
-    <link rel="icon" href="images/Adidas-Logo.png" type="text/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/1acf2d22a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../css/style_AddProduct.css" />
+    <link rel="stylesheet" href="../../css/avt.css">
+    <!-- css style - co the sua lai -->
+    <title>Add products</title>
 
-    
-    <link rel="stylesheet" href="../../css/bag.css" />
-    <link rel="stylesheet" href="../../css/admin.css" />
-    
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   </head>
   <body>
-    <div class="container">
-      <aside>
-        <div class="top">
-          <div class="logo">
-            <img src="../images/Adidas-Logo.png" alt="" />
-          </div>
-          <div class="close">
-            <span class="material-symbols-sharp">close</span>
-          </div>
-        </div>
+    
+    <header>
+      <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+      
+      <ul class="nav-menu">
+          <li><a href="productAdmin.html">Products</a></li>
+          <li><a href="orderAdmin.html">Orders</a></li>
+          <li><a href="userAdmin.html">Users</a></li>
+          <li><a href="thongKeAdmin.html">Product statistics</a></li>
+          <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
+      </ul>
+      
+      <!--thẻ <i> là thẻ chứ biểu tượng -->
+      <div class="nav-icon">
+          
+          <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
 
-        <div class="sidebar">
-          <a href="#" class="menu-item" data-target="dashboard">
-            <span class="material-symbols-sharp">grid_view</span>
-            <h3>Dashboard</h3>
+
+          <a href="/html/user.html" class="chat-bubble">
+              <img src="/images/abc.jpg" alt="Avatar">
+              <span>Hi, zan</span>
           </a>
-
-          <a href="#" class="menu-item active" data-target="customers">
-            <span class="material-symbols-sharp">person_outline</span>
-            <h3>Customers</h3>
-          </a>
-          <a
-            href="#"
-            class="menu-item dropdown-btn"
-            onclick="toggleDropdown(event)"
-            data-target="products"
-          >
-            <span class="material-symbols-sharp">receipt_long</span>
-            <h3>Products</h3>
-          </a>
-          <a href="#" class="menu-item" data-target="reports">
-            <span class="material-symbols-sharp">report_gmailerrorred</span>
-            <h3>Reports</h3>
-          </a>
-          <a href="#" class="menu-item" data-target="logout">
-            <span class="material-symbols-sharp">logout</span>
-            <h3>Logout</h3>
-          </a>
-        </div>
-      </aside>
-
-      <main>
-        <div id="dashboard" class="content-section">
-          <h1>Dashboard</h1>
-          <div class="date">
-            <input type="date" />
-          </div>
-
-          <div class="insights">
-            <div class="sales">
-              <span class="material-symbols-sharp">trending_up</span>
-              <div class="middle">
-                <div class="left">
-                  <h3>Total Sales</h3>
-                  <h1>$25,023</h1>
-                </div>
-                <div class="progress">
-                  <svg>
-                    <circle r="30" cy="40" cx="40"></circle>
-                  </svg>
-                  <div class="number">80%</div>
-                </div>
-              </div>
-              <small>Last 24 Hours</small>
-            </div>
-            <div class="expenses">
-              <span class="material-symbols-sharp">local_mall</span>
-              <div class="middle">
-                <div class="left">
-                  <h3>Expenses</h3>
-                  <h1>$25,023</h1>
-                </div>
-                <div class="progress">
-                  <svg>
-                    <circle r="30" cy="40" cx="40"></circle>
-                  </svg>
-                  <div class="number">80%</div>
-                </div>
-              </div>
-              <small>Last 24 Hours</small>
-            </div>
-            <div class="income">
-              <span class="material-symbols-sharp">stacked_line_chart</span>
-              <div class="middle">
-                <div class="left">
-                  <h3>Income</h3>
-                  <h1>$25,023</h1>
-                </div>
-                <div class="progress">
-                  <svg>
-                    <circle r="30" cy="40" cx="40"></circle>
-                  </svg>
-                  <div class="number">80%</div>
-                </div>
-              </div>
-              <small>Last 24 Hours</small>
-            </div>
-          </div>
-
-          <div class="recent_order">
-            <h1>Recent Orders</h1>
-            <table>
-              <thead>
-                <tr>
-                  <th>Product Name</th>
-                  <th>Product Number</th>
-                  <th>Payments</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Nike Zoom Vomero Roam</td>
-                  <td>456</td>
-                  <td>Due</td>
-                  <td class="warning">Pending</td>
-                  <td class="primary">Details</td>
-                </tr>
-                <tr>
-                  <td>Nike Zoom Vomero Roam</td>
-                  <td>456</td>
-                  <td>Due</td>
-                  <td class="warning">Pending</td>
-                  <td class="primary">Details</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div id="customers" class="content-section">
-          <h1>Customers</h1>
-          <!-- Add customer-related content here -->
-        </div>
-
-
-
-
-
-
-        <div id="products" class="content-section">
-            
-    <section id="main">
-      <button id="openNav" class="menu-button" onclick="w3_open()">&#9776; Menu</button>
-      <!--create button-->
-      <h1>Sản Phẩm</h1>
-      <a href="addProduct.html" class="create-button"><i class="fas fa-plus"></i> Thêm</a>
-      <!--product list-->
-      <table>
-          <!--noi dung tieu de-->
-          <tr class="title">
-              <th>Mã</th>
-              <th>Hình ảnh</th>
-              <th>Tên sản phẩm</th>
-              <th>Giá</th>
-              <th>Số lượng tồn kho</th>
-              <th>Thao tác</th>
-          </tr>
-          <!--noi dung cac san pham-->
-          <tr class="product">
-              <td>#1</td>
-              <td><a href="productDetail.html"><img src="../../img/bike1.jpg" alt="bike1"></a></td>
-              <td>GIANT ESCAPE 2 CITY 2017</td>
-              <td>16.490.000đ</td>
-              <td>15</td>
-              <td>
-                  <a href="editProduct.html" class="action-button">
-                      <i class="fas fa-edit"></i>
-                      <div class="action-tooltip">Chỉnh sửa</div>
-                  </a>
-                  <a class="action-button" onclick="warning(this)">
-                      <i class="fas fa-trash-alt"></i>
-                      <div class="action-tooltip">Xóa</div>
-                  </a>
-              </td>
-          </tr>
-          <tr class="product">
-              <td>#2</td>
-              <td><a href="productDetail.html"><img src="../../img/bike3.jpg" alt="bike3"></a></td>
-              <td>GIANT ESCAPE 2 CITY 2017</td>
-              <td>16.490.000đ</td>
-              <td>15</td>
-              <td>
-                  <a href="editProduct.html" class="action-button">
-                      <i class="fas fa-edit"></i>
-                      <div class="action-tooltip">Chỉnh sửa</div>
-                  </a>
-                  <a class="action-button" onclick="warning(this)">
-                      <i class="fas fa-trash-alt"></i>
-                      <div class="action-tooltip">Xóa</div>
-                  </a>
-              </td>
-          </tr>
-          <tr class="product">
-              <td>#3</td>
-              <td><a href="productDetail.html"><img src="../../img/bike2.jpg" alt="bike2"></a></td>
-              <td>GIANT ESCAPE 2 CITY 2017</td>
-              <td>16.490.000đ</td>
-              <td>15</td>
-              <td>
-                  <a href="editProduct.html" class="action-button">
-                      <i class="fas fa-edit"></i>
-                      <div class="action-tooltip">Chỉnh sửa</div>
-                  </a>
-                  <a class="action-button" onclick="warning(this)">
-                      <i class="fas fa-trash-alt"></i>
-                      <div class="action-tooltip">Xóa</div>
-                  </a>
-              </td>
-          </tr>
-      </table>
-      <div class="pagination">
-          <a href="productAdmin.html">&lt;</a>
-          <a href="productAdmin.html" class="active">1</a>
-          <a href="productAdmin2.html">2</a>
-          <a href="productAdmin2.html">&gt;</a>
+                
+          
+          <div class= "bx bx-menu" id ="menu-icon"></div>
       </div>
-  </section>  
+
+  </header>
+
+  <!--tìm kiếm nâng cao-->    
+  <div class="search-container" id="searchPopup">
+      <h2>Advanced Product Search</h2>
+      
+      <!-- Search Form -->
+      <form id="searchForm">
+        <!-- Product Name Field -->
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <input type="text" id="productName" name="productName" placeholder="Enter product name...">
         </div>
+        
+      <!-- Category Selection -->
+      <div class="form-group">
+      <label for="category">Category</label>
+      <select id="category" name="category">
+          <option value="">Select category</option>
+          <option value="shoes">Sport</option>
+          <option value="nike-air">nike-air</option>
+          <option value="fastion">fastion</option>
+          <option value="accessories">giay siu dep</option>
+          <!-- Add more categories as needed -->
+      </select>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-      // JavaScript for switching between sections
-      const menuItems = document.querySelectorAll(".menu-item");
-      const contentSections = document.querySelectorAll(".content-section");
-
-      menuItems.forEach((item) => {
-        item.addEventListener("click", function () {
-          // Remove 'active' class from all menu items
-          menuItems.forEach((menuItem) => menuItem.classList.remove("active"));
-
-          // Add 'active' class to the clicked menu item
-          item.classList.add("active");
-
-          // Hide all content sections
-          contentSections.forEach(
-            (section) => (section.style.display = "none")
-          );
-
-          // Show the target section
-          const target = item.getAttribute("data-target");
-          document.getElementById(target).style.display = "block";
-        });
-      });
-
-      // Initially display the Dashboard
-      document.getElementById("dashboard").style.display = "block";
-    </script>
-  </body>
-</html>
+      <div class="form-group">
+      <label for="category">For your</label>
+      <select id="category" name="category">
+          <option value="">Select category</option>
+          <option value="shoes">men</option>
+          <option value="nike-air">woman</option>
+          <option value="fastion">kid</option>
+          <!-- Add more categories as needed -->
+      </select>
+      </div>
+        
+        <!-- Price Range Fields -->
+        <div class="form-group">
+          <label>Price Range</label>
+          <div class="price-range">
+            <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+            <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+          </div>
+        </div>
+        
+        <!-- Search Button -->
+        <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+        <a href="shop.html">
+          <button type="button" class="search-button">Search</button>
+        </a>
+      </form>
+    </div>
+    
+    <!-- Result Display Section -->
+    <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+  </div>
+  
