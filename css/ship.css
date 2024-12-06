@@ -314,7 +314,7 @@ body {
     display: flex;
     width: 80%;
     max-width: 1200px;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 .form-section, .summary-section {
     padding: 20px;
@@ -330,9 +330,22 @@ body {
     border: 1px solid #ddd;
 }
 h2 {
+    transform: translateY(-10px);
     margin-top: 0;
     font-size: 1.2em;
     font-weight: normal;
+}
+h4 {
+    font-size: 1.2em;
+    transform: translateY(-5px);
+}
+.bills{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.paym{
+    margin-top: 20px;
+    margin-bottom: 7px;
 }
 .input-group {
     margin-bottom: 15px;
@@ -347,6 +360,10 @@ h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.shipt{
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .form-section p{
@@ -369,6 +386,7 @@ h2 {
 .button-primary {
     background-color: #000;
     color: #fff;
+    font-size: 20px;
 }
 .input-checkbox {
     display: flex;
@@ -394,6 +412,31 @@ h2 {
     display: flex;
     gap: 10px;
     margin: 10px 0;
+}
+.payment-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.payment-button:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-button img {
+    margin-left: 10px;
+    height: 15px;
+    width: auto;
+}
+
+.payment-button .label {
+    font-weight: bold;
 }
 .place-order {
     width: 100%;
