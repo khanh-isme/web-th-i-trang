@@ -29,7 +29,13 @@ img{
     overflow: hidden;
     
 }
-
+body{
+    width: 100%;
+    height: auto;
+    background-image: url(../images/32.webp);
+    background-position: center;
+    background-size: cover;
+}
 .wrapper .form-box{
     position: absolute;
     width: 100%; 

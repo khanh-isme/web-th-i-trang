@@ -316,9 +316,9 @@ section{
                         left: 10%;
 }
 
-.main-text h5{
-    color: #EE1c47;
-    font-size: 16px;
+.main-text h2{
+    color: #fff;
+    font-size: 30px;
     text-transform:capitalize ;
     font-weight: 500;
 }
