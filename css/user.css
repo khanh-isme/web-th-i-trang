@@ -137,10 +137,17 @@
     margin-bottom: 10px;
   }
 
-
+  .history{
+    border-bottom: #000 solid 5px;
+    width: 500px;
+    margin-bottom: 30px;
+  }
   .history img{
     width: 100px;
    
+  }
+  .history h3{
+    margin: 10px;
   }
   .history p{
     margin: 10px;
@@ -160,4 +167,35 @@
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     max-width: 300px;
+}
+
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+
+.icon { 
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  background-color: rgba(112, 112, 112, 0.2);
+  border: none;
+  border-radius: 5px;
+  color: #796d6d;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #4e4e4e;
 }

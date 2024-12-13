@@ -105,24 +105,30 @@
         <select id="category" name="category">
             <option value="">Select category</option>
             <option value="shoes">Sport</option>
-            <option value="nike-air">nike-air</option>
+            
             <option value="fastion">fastion</option>
-            <option value="accessories">giay siu dep</option>
+           
             <!-- Add more categories as needed -->
         </select>
         </div>
 
         <div class="form-group">
-        <label for="category">For your</label>
+        <label for="category">Collection</label>
         <select id="category" name="category">
-            <option value="">Select category</option>
-            <option value="shoes">men</option>
-            <option value="nike-air">woman</option>
-            <option value="fastion">kid</option>
+            <option value="">Select collection</option>
+            <option value="">winter</option>
+            <option value="shoes">summer</option>
+            <option value="nike-air">spring</option>
+
             <!-- Add more categories as needed -->
         </select>
         </div>
           
+        <div class="form-group">
+            <label for="productName">Size</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter size...">
+          </div>
+
           <!-- Price Range Fields -->
           <div class="form-group">
             <label>Price Range</label>
@@ -131,6 +137,7 @@
               <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
             </div>
           </div>
+          
           
           <!-- Search Button -->
           <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
@@ -143,6 +150,8 @@
       <!-- Result Display Section -->
       <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
     </div>
+
+
 
 
 
@@ -169,13 +178,13 @@
                     <a href="shopF.html">Unisex</a>
                 </div>
 
-                <div class="filter-header-color"  onclick="toggleSize1()">Color </div>
+                <div class="filter-header-color"  onclick="toggleSize1()">Category </div>
                 <div class="filter-options" id="color-options">
-                    <a href="shopF.html"> blue </a>
+                    <a href="shopF.html"> Sport </a>
 
-                    <a href="shopF.html"> red </a>
+                    <a href="shopF.html"> Fastion </a>
                     
-                    <a href="shopF.html">gray</a>
+                
                 </div>
 
                 <div class="filter-header-collection"  onclick="toggleSize2()">Collection </div>

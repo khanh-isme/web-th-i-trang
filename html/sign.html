@@ -97,30 +97,36 @@
             <input type="text" id="productName" name="productName" placeholder="Enter product name...">
           </div>
           
-          <!-- Category Selection -->
-          <div class="form-group">
-            <label for="category">Category</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="shoes">Sport</option>
-              <option value="nike-air">nike-air</option>
-              <option value="fastion">fastion</option>
-              <option value="accessories">giay siu dep</option>
-              <!-- Add more categories as needed -->
-            </select>
+        <!-- Category Selection -->
+        <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="">Select category</option>
+            <option value="shoes">Sport</option>
+            
+            <option value="fastion">fastion</option>
+           
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="category">Collection</label>
+        <select id="category" name="category">
+            <option value="">Select collection</option>
+            <option value="">winter</option>
+            <option value="shoes">summer</option>
+            <option value="nike-air">spring</option>
+
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+          
+        <div class="form-group">
+            <label for="productName">Size</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter size...">
           </div>
 
-          <div class="form-group">
-            <label for="category">For your</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="shoes">men</option>
-              <option value="nike-air">woman</option>
-              <option value="fastion">kid</option>
-              <!-- Add more categories as needed -->
-            </select>
-          </div>
-          
           <!-- Price Range Fields -->
           <div class="form-group">
             <label>Price Range</label>
@@ -129,6 +135,7 @@
               <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
             </div>
           </div>
+          
           
           <!-- Search Button -->
           <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
@@ -141,7 +148,8 @@
       <!-- Result Display Section -->
       <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
     </div>
-    
+
+
 
 
     
@@ -163,6 +171,10 @@
             <div class="input-container">
                 <i class="icon"><i class='bx bxs-envelope'></i>&nbsp;</i>
                 <input type="text" placeholder="Email ID" name="email" required>
+            </div>
+            <div class="input-container">
+                <i class="icon"><i class='bx bx-home'></i>&nbsp;</i>
+                <input type="text" placeholder="Address" name="Address  " required>
             </div>
             <div class="regester">
                 <a href="index1.html">
