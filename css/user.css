@@ -185,8 +185,8 @@
   color: #fff;
 }
 
-input[type="text"],
-input[type="password"] {
+.input-container input[type="text"],
+.input-container input[type="password"] {
   width: 100%;
   padding: 10px 10px 10px 35px;
   background-color: rgba(112, 112, 112, 0.2);
@@ -196,6 +196,6 @@ input[type="password"] {
   font-size: 16px;
 }
 
-input::placeholder {
+.input-container input::placeholder {
   color: #4e4e4e;
 }
