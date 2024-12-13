@@ -14,6 +14,21 @@
 
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        .button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: white;
+          border: 1px solid #ccc;
+          color: black;
+          cursor: pointer;
+        }
+        .button.active {
+          background-color: black;
+          color: white;
+        }
+      </style>
 </head>
 <body>
     
@@ -173,7 +188,6 @@
 
 
 
-
     <section class="product-section-cart">
         <div class="product-page">
             <div class="product-gallery">
@@ -192,19 +206,20 @@
             <div class="product-details">
                 <h1>Nike V2K Run GORE-TEX</h1>
                 <p class="category">Women's Waterproof Shoes</p>
-                <p class="price"> $ 100</p>
+                <p class="price"> $100</p>
+                <p class="category">Take your love for the game with you wherever you go. Crossing hardwood comfort with off-court flair, these kicks put a fresh spin on a hoops classic with leather and perfectly placed mini Swooshes. Of course, we kept the same era-echoing '80s construction and Nike Air cushioning you know and love for that legendary</p>
                 <div class="size-selection">
                     <h3>Select Size</h3>
                     <div class="sizes">
-                        <button>EU 35.5</button>
-                        <button>EU 36</button>
-                        <button>EU 36.5</button>
-                        <button>EU 37.5</button>
-                        <button>EU 38</button>
-                        <button>EU 38.5</button>
-                        <button>EU 39</button>
-                        <button>EU 40</button>
-                        <button>EU 40.5</button>
+                        <button class="button" onclick="selectButton(this)">EU 35.5</button>
+                        <button class="button" onclick="selectButton(this)">EU 36</button>
+                        <button class="button" onclick="selectButton(this)">EU 36.5</button>
+                        <button class="button" onclick="selectButton(this)">EU 37.5</button>
+                        <button class="button" onclick="selectButton(this)">EU 38</button>
+                        <button class="button" onclick="selectButton(this)">EU 40</button>
+
+                        <button class="button" onclick="selectButton(this)">EU 40.5</button>
+                        <button class="button" onclick="selectButton(this)">EU 41</button>
                         <button disabled>EU 41</button>
                     </div>
                 </div>
@@ -284,9 +299,17 @@
 
 
 
-
-
+    <script>
+        function selectButton(button) {
+          // Loại bỏ class "active" khỏi tất cả các nút
+          const buttons = document.querySelectorAll('.button');
+          buttons.forEach(btn => btn.classList.remove('active'));
     
+          // Thêm class "active" vào nút được click
+          button.classList.add('active');
+        }
+      </script>
+
     <script src="../java script/java.js"></script>
 </body>
 </html>
