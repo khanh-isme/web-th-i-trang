@@ -55,6 +55,7 @@
 		</header>
 	  
 		<!--tìm kiếm nâng cao-->    
+		<!--tìm kiếm nâng cao-->    
 		<div class="search-container" id="searchPopup">
 			<h2>Advanced Product Search</h2>
 			
@@ -72,24 +73,42 @@
 			<select id="category" name="category">
 				<option value="">Select category</option>
 				<option value="shoes">Sport</option>
-				<option value="nike-air">nike-air</option>
+				
 				<option value="fastion">fastion</option>
-				<option value="accessories">giay siu dep</option>
+			   
 				<!-- Add more categories as needed -->
 			</select>
 			</div>
-	  
-			<div class="form-group">
-			<label for="category">For your</label>
+		
+			 <div class="form-group">
+			<label for="category">Collection</label>
 			<select id="category" name="category">
-				<option value="">Select category</option>
-				<option value="shoes">men</option>
-				<option value="nike-air">woman</option>
-				<option value="fastion">kid</option>
+				<option value="">Select collection</option>
+				<option value="">winter</option>
+				<option value="shoes">summer</option>
+				<option value="nike-air">spring</option>
+		
 				<!-- Add more categories as needed -->
 			</select>
 			</div>
+		
+			<div class="form-group">
+				<label for="category">Gender</label>
+				<select id="category" name="category">
+					<option value="">Select gender</option>
+					<option value="">Men</option>
+					<option value="">Woman</option>
+					<option value="shoes">Unisex</option>
+					
+					<!-- Add more categories as needed -->
+				</select>
+				</div>
 			  
+			<div class="form-group">
+				<label for="productName">Size</label>
+				<input type="text" id="productName" name="productName" placeholder="Enter size...">
+			  </div>
+		
 			  <!-- Price Range Fields -->
 			  <div class="form-group">
 				<label>Price Range</label>
@@ -98,6 +117,7 @@
 				  <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
 				</div>
 			  </div>
+			  
 			  
 			  <!-- Search Button -->
 			  <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
