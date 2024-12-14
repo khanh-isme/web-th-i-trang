@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/style_Thongke.css">
+    <title>Statistical</title>
+
+    <link rel="stylesheet" href="../../css/avt.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet"
+		href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class ="logo"> <img src="../../images/Adidas-Logo.png" alt=""></a>
+        
+        <ul class="nav-menu">
+            <li><a href="productAdmin.html">Products</a></li>
+            <li><a href="orderAdmin.html">Orders</a></li>
+            <li><a href="userAdmin.html">Users</a></li>
+            <li><a href="thongKeAdmin.html">Product statistics</a></li>
+            <li><a href="thongKeKHAdmin.html">Customer statistics</a></li>
+        </ul>
+        
+        <!--thẻ <i> là thẻ chứ biểu tượng -->
+        <div class="nav-icon">
+            
+            <div class="search-icon"><i class='bx bx-search'  onclick="toggleSearch()"></i></div>
+  
+  
+            <a href="userDetail.html" class="chat-bubble">
+                <img src="../../images/abc.jpg" alt="Avatar">
+                <span>Hi, zan</span>
+            </a>
+                  
+            
+            <div class= "bx bx-menu" id ="menu-icon"></div>
+        </div>
+  
+    </header>
+  
+    <!--tìm kiếm nâng cao-->    
+    <!--tìm kiếm nâng cao-->    
+   <div class="search-container" id="searchPopup">
+    <h2>Advanced Product Search</h2>
+    
+    <!-- Search Form -->
+    <form id="searchForm">
+      <!-- Product Name Field -->
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" name="productName" placeholder="Enter product name...">
+      </div>
+      
+    <!-- Category Selection -->
+    <div class="form-group">
+    <label for="category">Category</label>
+    <select id="category" name="category">
+        <option value="">Select category</option>
+        <option value="shoes">Sport</option>
+        
+        <option value="fastion">fastion</option>
+       
+        <!-- Add more categories as needed -->
+    </select>
+    </div>
+
+     <div class="form-group">
+    <label for="category">Collection</label>
+    <select id="category" name="category">
+        <option value="">Select collection</option>
+        <option value="">winter</option>
+        <option value="shoes">summer</option>
+        <option value="nike-air">spring</option>
+
+        <!-- Add more categories as needed -->
+    </select>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Gender</label>
+        <select id="category" name="category">
+            <option value="">Select gender</option>
+            <option value="">Men</option>
+            <option value="">Woman</option>
+            <option value="shoes">Unisex</option>
+            
+            <!-- Add more categories as needed -->
+        </select>
+        </div>
+      
+    <div class="form-group">
+        <label for="productName">Size</label>
+        <input type="text" id="productName" name="productName" placeholder="Enter size...">
+      </div>
+
+      <!-- Price Range Fields -->
+      <div class="form-group">
+        <label>Price Range</label>
+        <div class="price-range">
+          <input type="number" id="minPrice" name="minPrice" placeholder="Min" min="0">
+          <input type="number" id="maxPrice" name="maxPrice" placeholder="Max" min="0">
+        </div>
+      </div>
+      
+      
+      <!-- Search Button -->
+      <!--<button type="button" class="search-button" onclick="performSearch()">Search</button>-->
+      <a href="productAdminSearch.html">
+        <button type="button" class="search-button">Search</button>
+      </a>
+    </form>
+  </div>
+  
+  <!-- Result Display Section -->
+  <div id="searchResults" style="margin-top: 20px; text-align: center;"></div>
+</div>
+
+
+
+
+
+<main>
+   
+    <section id="main">
+
+        <h1>Statistics Result</h1>
+        <!--product list-->
+        <div class="filter">
+            <!--chon filter-->
+            <span><input type="radio" name="chon" value="ten" id="ten" onclick="checkTen()" checked>By name</span>
+            <span><input type="radio" name="chon" value="loai" id="loai" onclick="checkLoai()">By category</span>
+            <!--thong ke theo ten sp-->
+            <input type="text" name="tenSp" id="tenSp" placeholder="Product name">
+            <!--thong ke theo loai san pham-->
+            <select name="loaiSp" id="loaiSp">
+                <option value="kids">Sport</option>
+                <option value="moutain">Fastion</option>
+            </select>
+            <div class="date">
+                <label for="start">From: </label>
+                <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
+                <label for="start">to </label>
+                <input type="date" id="end" name="end" value="2024-12-07" min="2018-01-01" max="2023-12-31">
+            </div>
+            <a onclick="move()" class="thongKe"></i>Submit</a>
+        </div>
+        
+        <table>
+            <!--noi dung tieu de-->
+            <tr class="title">
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Quantity</th>
+                <th>Bill</th>
+            </tr>
+            <!--noi dung cac san pham-->
+            <tr class="product">
+                <td><img style="width: 100px; height: 100px;" src="../../images/10.png" alt=""></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
+                <td class="state">2</td>
+                <td><a href="orderAdmin.html">see bill</a></td>
+            </tr>
+            <tr class="product">
+                <td><img style="width: 100px; height: 100px;" src="../../images/11.png" alt=""></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
+                <td class="state">2</td>
+                <td><a href="orderAdmin.html">see bill</a></td>
+            </tr>
+            <tr class="product">
+                <td><img style="width: 100px; height: 100px;" src="../../images/12.png" alt=""></td>
+                <td>GIANT ESCAPE 2 CITY 2017</td>
+                <td>$49.99</td>
+                <td>$49.99</td>
+                <td class="state">2</td>
+                <td><a href="orderAdmin.html">see bill</a></td>
+            </tr>
+        </table>
+        <div class="pagination">
+            <a href="thongKeAdmin.html">&lt;</a>
+            <a href="thongKeAdmin.html" class="active">1</a>
+            <a href="thongKeAdmin2.html">2</a>
+            <a href="thongKeAdmin2.html">&gt;</a>
+        </div>
+    </section>
+    <script>
+        // js cua phan aside menu
+			function w3_open() {
+  				document.getElementById("main").style.marginLeft = "15%";
+  				document.getElementById("mySidebar").style.width = "15%";
+  				document.getElementById("mySidebar").style.display = "block";
+  				document.getElementById("openNav").style.display = 'none';
+				}
+			function w3_close() {
+  				document.getElementById("main").style.marginLeft = "0%";
+  				document.getElementById("mySidebar").style.display = "none";
+  				document.getElementById("openNav").style.display = "inline-block";
+			}
+
+            ten = document.getElementById("ten");
+            loai = document.getElementById("loai");
+            tenSp = document.getElementById("tenSp");
+            loaiSp = document.getElementById("loaiSp");
+            function checkTen(){
+                tenSp.style.display="block";
+                loaiSp.style.display="none";
+            }
+
+            function checkLoai(){
+                tenSp.style.display="none";
+                loaiSp.style.display="block";
+            }
+
+            function move(){
+                if(ten.checked == true && tenSp.value==''){
+                    alert("Please enter product's name!");
+                }
+                else if(ten.checked == true && tenSp.value!=''){
+                    window.location.href ="thongketenAdmin.html";
+                }
+                else{
+                    window.location.href ="thongkeloaiAdmin.html";
+                }
+            }
+            
+    </script>
+    <script src="../../java script/java.js"></script>  
+</main>
+</body>
+</html>
